@@ -1,0 +1,50 @@
+// flex box properties
+
+
+.d-flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-end {
+  display: flex;
+  align-items: end;
+}
+
+.justify-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.justify-space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-1{
+  display: flex;
+  flex:1;
+}
+
+// cursor pointer
+
+.pointer {
+  cursor: pointer;
+}
+
+// width properties
+
+.w-50{
+  width: 50%;
+}

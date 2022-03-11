@@ -1,0 +1,35 @@
+// variables for colors and backgrounds
+
+
+$col-green-1:#147D64;
+$col-green-2:#DCF9ED;
+$col-green-3:#F2FDF8;
+$col-green-4:#EFFCF6;
+$col-green-5:#176056;
+$col-green-6:#5CBBA0;
+$col-grey-1:#696E6D;
+$col-grey-2:#3D403F;
+$col-grey-3:#FAFAF9;
+$col-black:#000000;
+$col-white:#FFFFFF;
+
+// for each, for colors
+
+$colors: (
+        "col-green-1":#147D64,
+        "col-green-2":#DCF9ED,
+        "col-green-3":#F2FDF8,
+        "col-green-4":#EFFCF6,
+        "col-green-5":#176056,
+        "col-green-6":#5CBBA0,
+        "col-grey-1":#696E6D,
+        "col-grey-2":#3D403F,
+        "col-grey-3":#FBFBFB,
+        "col-black":#000000,
+        "col-white":#FFFFFF,
+);
+@each $name, $hex in $colors {
+  .#{$name} {
+    color: $hex;
+  }
+}

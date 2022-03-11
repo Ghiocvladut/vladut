@@ -1,0 +1,38 @@
+// import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap');
+
+// import components
+
+@import "components/header";
+
+@import "components/hero";
+
+@import "components/review";
+
+@import "components/products";
+
+// import partials
+
+@import "partials/classes";
+
+@import "partials/variables";
+
+@import "partials/general";
+
+@import "partials/border-radius";
+
+@import "partials/borders";
+
+@import "partials/fonts";
+
+
+//general styles
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+}

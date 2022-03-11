@@ -1,0 +1,24 @@
+// imports
+
+
+.review{
+  position: relative;
+  &-item{
+    z-index: -2;
+  }
+  &-complete{
+    z-index: 2;
+    position: relative;
+    top:-125px;
+    .project{
+      margin-top: 36px;
+      box-shadow:0px 6px 8px -5px rgba(0,0,0,0.86);
+      &-item{
+      border-right:1px solid black;
+        &:last-child{
+          border-right:none;
+        }
+    }
+    }
+  }
+}

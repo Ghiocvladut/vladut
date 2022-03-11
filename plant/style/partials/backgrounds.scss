@@ -1,0 +1,17 @@
+@import "variables";
+
+$colors: (
+        "col-green-1":#147D64,
+        "col-green-2":#DCF9ED,
+        "col-green-3":#F2FDF8,
+        "col-green-4":#EFFCF6,
+        "col-green-5":#176056,
+        "col-grey-1":#696E6D,
+        "col-grey-2":#3D403F,
+        "col-white":#FFFFFF,
+);
+@each $name, $hex in $colors {
+  .bg-#{$name} {
+    background-color: $hex;
+  }
+}

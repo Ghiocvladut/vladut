@@ -1,0 +1,36 @@
+// imports
+
+@import "../partials/backgrounds";
+@import "../partials/variables";
+
+// mixin
+
+
+@mixin for-desktop {
+  @media (max-width:1320px) { @content; }
+}
+
+
+// content
+
+.hero{
+  &-content{
+    @include for-desktop{
+      display: flex;
+      flex-direction: column;
+      .left-part{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 20px;
+        border-radius: 8px;
+      }
+      .right-part{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

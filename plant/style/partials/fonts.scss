@@ -1,0 +1,45 @@
+// fonts
+$fonts: (24: 30, 20: 25, 14: 18, 12: 15, 16: 20, 18: 23, 28: 35, 10: 13,);
+
+@each $size, $height in $fonts {
+  .font-#{$size}-300 {
+    font-size: #{$size}px;
+    line-height: #{$height}px;
+    font-weight: 300;
+  }
+  .font-#{$size}-400 {
+    font-size: #{$size}px;
+    line-height: #{$height}px;
+    font-weight: 400;
+  }
+  .font-#{$size}-500 {
+    font-size: #{$size}px;
+    line-height: #{$height}px;
+    font-weight: 500;
+  }
+  .font-#{$size}-600 {
+    font-size: #{$size}px;
+    line-height: #{$height}px;
+    font-weight: 600;
+  }
+  .font-#{$size}-700 {
+    font-size: #{$size}px;
+    line-height: #{$height}px;
+    font-weight: 700;
+  }
+  .font-#{$size}-800 {
+    font-size: #{$size}px;
+    line-height: #{$height}px;
+    font-weight: 800;
+  }
+  .font-#{$size}-900 {
+    font-size: #{$size}px;
+    line-height: #{$height}px;
+    font-weight: 900;
+  }
+}
+
+//bold
+.bold {
+  font-weight: bold;
+}

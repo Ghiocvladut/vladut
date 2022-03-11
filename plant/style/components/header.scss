@@ -1,0 +1,88 @@
+// imports
+
+@import "../partials/backgrounds";
+@import "../partials/variables";
+
+// mixin
+
+@mixin for-desktop {
+  @media (max-width: 1320px) {
+    @content;
+  }
+}
+
+
+// content
+
+.header {
+  .about {
+    @include for-desktop {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo {
+      strong {
+        font-size: 26px;
+      }
+
+      span {
+        font-size: 26px;
+        letter-spacing: 1px;
+        font-weight: 600;
+      }
+    }
+
+    .menu {
+      @include for-desktop {
+        margin-top: 24px;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+          position: relative;
+          font-size: 24px;
+          font-weight: 500;
+
+          &:hover,
+          &.active {
+            span {
+              font-weight: bold;
+            }
+
+            &:before {
+              width: 68px;
+              height: 2px;
+              background: $col-green-1;
+              position: absolute;
+              content: "";
+              bottom: -6px;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .register {
+      @include for-desktop {
+        margin-top: 40px;
+      }
+
+      .cta {
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+
+}
+
+
+
+

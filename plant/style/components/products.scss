@@ -1,0 +1,86 @@
+// imports
+@import "../partials/variables";
+@import "../partials/backgrounds";
+
+// mixin
+
+
+@mixin for-desktop {
+  @media (max-width:1320px) { @content; }
+}
+
+
+
+// content
+
+
+.sale{
+  @include for-desktop{
+    display: flex;
+    flex-direction: column;
+  }
+  &-item{
+    width: 400px;
+    height: 500px;
+    position: relative;
+
+    img{
+      width: 400px;
+      height: 500px;
+      @include for-desktop{
+        width: 525px;
+        margin-bottom: 24px;
+      }
+    }
+    &-hover{
+      position:absolute;
+      width: 400px;
+      height: 500px;
+      background-color:rgba($col-green-6,0.7);
+      top:0;
+      display: none;
+      border-radius: 8px;
+      @include for-desktop{
+        width: 525px;
+      }
+      &-content{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        margin-top: 20px;
+        top:-180px;
+        position: relative;
+        .promo{
+          background: white;
+          border-radius: 50%;
+          padding: 14px 5px;
+
+        }
+      }
+
+    }
+    &:hover{
+      .sale-item-hover{
+        display: block;
+      }
+    }
+  }
+  &-list{
+    @include for-desktop{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top:24px;
+
+    }
+    &-item{
+      margin-right: 240px;
+      @include for-desktop{
+        margin-right: 0;
+      }
+    }
+  }
+}

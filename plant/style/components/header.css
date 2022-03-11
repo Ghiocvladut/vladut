@@ -1,0 +1,130 @@
+.col-green-1 {
+  color: #147D64; }
+
+.col-green-2 {
+  color: #DCF9ED; }
+
+.col-green-3 {
+  color: #F2FDF8; }
+
+.col-green-4 {
+  color: #EFFCF6; }
+
+.col-green-5 {
+  color: #176056; }
+
+.col-green-6 {
+  color: #5CBBA0; }
+
+.col-grey-1 {
+  color: #696E6D; }
+
+.col-grey-2 {
+  color: #3D403F; }
+
+.col-grey-3 {
+  color: #FBFBFB; }
+
+.col-black {
+  color: #000000; }
+
+.col-white {
+  color: #FFFFFF; }
+
+.bg-col-green-1 {
+  background-color: #147D64; }
+
+.bg-col-green-2 {
+  background-color: #DCF9ED; }
+
+.bg-col-green-3 {
+  background-color: #F2FDF8; }
+
+.bg-col-green-4 {
+  background-color: #EFFCF6; }
+
+.bg-col-green-5 {
+  background-color: #176056; }
+
+.bg-col-grey-1 {
+  background-color: #696E6D; }
+
+.bg-col-grey-2 {
+  background-color: #3D403F; }
+
+.bg-col-white {
+  background-color: #FFFFFF; }
+
+.col-green-1 {
+  color: #147D64; }
+
+.col-green-2 {
+  color: #DCF9ED; }
+
+.col-green-3 {
+  color: #F2FDF8; }
+
+.col-green-4 {
+  color: #EFFCF6; }
+
+.col-green-5 {
+  color: #176056; }
+
+.col-green-6 {
+  color: #5CBBA0; }
+
+.col-grey-1 {
+  color: #696E6D; }
+
+.col-grey-2 {
+  color: #3D403F; }
+
+.col-grey-3 {
+  color: #FBFBFB; }
+
+.col-black {
+  color: #000000; }
+
+.col-white {
+  color: #FFFFFF; }
+
+@media (max-width: 1320px) {
+  .header .about {
+    display: flex;
+    flex-direction: column; } }
+.header .about .logo strong {
+  font-size: 26px; }
+.header .about .logo span {
+  font-size: 26px;
+  letter-spacing: 1px;
+  font-weight: 600; }
+@media (max-width: 1320px) {
+  .header .about .menu {
+    margin-top: 24px; } }
+.header .about .menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .header .about .menu ul li {
+    position: relative;
+    font-size: 24px;
+    font-weight: 500; }
+    .header .about .menu ul li:hover span, .header .about .menu ul li.active span {
+      font-weight: bold; }
+    .header .about .menu ul li:hover:before, .header .about .menu ul li.active:before {
+      width: 68px;
+      height: 2px;
+      background: #147D64;
+      position: absolute;
+      content: "";
+      bottom: -6px;
+      left: 0; }
+@media (max-width: 1320px) {
+  .header .about .register {
+    margin-top: 40px; } }
+.header .about .register .cta {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.5px; }
+
+/*# sourceMappingURL=header.css.map */

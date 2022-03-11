@@ -1,0 +1,17 @@
+.review {
+  position: relative; }
+  .review-item {
+    z-index: -2; }
+  .review-complete {
+    z-index: 2;
+    position: relative;
+    top: -125px; }
+    .review-complete .project {
+      margin-top: 36px;
+      box-shadow: 0px 6px 8px -5px rgba(0, 0, 0, 0.86); }
+      .review-complete .project-item {
+        border-right: 1px solid black; }
+        .review-complete .project-item:last-child {
+          border-right: none; }
+
+/*# sourceMappingURL=review.css.map */
