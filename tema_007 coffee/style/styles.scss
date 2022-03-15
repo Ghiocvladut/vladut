@@ -106,38 +106,59 @@ body {
     &-item {
       width: 50%;
       text-align: left;
+
       .title {
-        font-weight: 700;
-        font-size: 30px;
-        line-height: 36px;
-        color: $col-blue-2;
         padding-right: 120px;
       }
 
       .details {
-        font-size: 14px;
-        line-height: 17px;
-        color: $col-blue-1;
         padding-left: 40px;
       }
 
       .info {
-        width:inherit;
+        width: inherit;
         padding-left: 80px;
-        .date {
-          font-size: 12px;
-          line-height: 15px;
-          color: $col-blue-1;
-        }
 
-        .more {
-          font-weight: 700;
-          font-size: 12px;
-          line-height: 15px;
-          color: $col-blue-2;
-        }
       }
     }
   }
 }
+.instructions{
+  &-list{
+    &-item{
+      box-shadow: -1px 8px 11px -3px rgba(0,0,0,0.44);
+      border-radius: 8px;
+    }
+  }
+}
+// generals for font, font size and line-height
 
+.date {
+  font-size: 12px;
+  line-height: 15px;
+  color: $col-blue-1;
+}
+
+.more {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: $col-blue-2;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color: $col-blue-2;
+  &.short{
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.details {
+  font-size: 14px;
+  line-height: 17px;
+  color: $col-blue-1;
+}

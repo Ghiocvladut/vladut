@@ -1102,4 +1102,96 @@
   margin-top: 80px;
   margin-bottom: 80px; }
 
+.p-120 {
+  padding: 120px; }
+
+.pt-120 {
+  padding-top: 120px; }
+
+.pb-120 {
+  padding-bottom: 120px; }
+
+.pl-120 {
+  padding-left: 120px; }
+
+.pr-120 {
+  padding-right: 120px; }
+
+.px-120 {
+  padding-left: 120px;
+  padding-right: 120px; }
+
+.py-120 {
+  padding-top: 120px;
+  padding-bottom: 120px; }
+
+.m-120 {
+  margin: 120px; }
+
+.mt-120 {
+  margin-top: 120px; }
+
+.mb-120 {
+  margin-bottom: 120px; }
+
+.ml-120 {
+  margin-left: 120px; }
+
+.mr-120 {
+  margin-right: 120px; }
+
+.mx-120 {
+  margin-left: 120px;
+  margin-right: 120px; }
+
+.my-120 {
+  margin-top: 120px;
+  margin-bottom: 120px; }
+
+.p-200 {
+  padding: 200px; }
+
+.pt-200 {
+  padding-top: 200px; }
+
+.pb-200 {
+  padding-bottom: 200px; }
+
+.pl-200 {
+  padding-left: 200px; }
+
+.pr-200 {
+  padding-right: 200px; }
+
+.px-200 {
+  padding-left: 200px;
+  padding-right: 200px; }
+
+.py-200 {
+  padding-top: 200px;
+  padding-bottom: 200px; }
+
+.m-200 {
+  margin: 200px; }
+
+.mt-200 {
+  margin-top: 200px; }
+
+.mb-200 {
+  margin-bottom: 200px; }
+
+.ml-200 {
+  margin-left: 200px; }
+
+.mr-200 {
+  margin-right: 200px; }
+
+.mx-200 {
+  margin-left: 200px;
+  margin-right: 200px; }
+
+.my-200 {
+  margin-top: 200px;
+  margin-bottom: 200px; }
+
 /*# sourceMappingURL=classes.css.map */
