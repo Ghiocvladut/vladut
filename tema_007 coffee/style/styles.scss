@@ -10,6 +10,16 @@
 
 @import "partials/variables.scss";
 
+// mixin for responsive
+
+@mixin for-desktop {
+  @media (max-width: 990px) { @content; }
+}
+@mixin for-mini-desktop {
+  @media (max-width: 948px) { @content; }
+}
+
+
 // general
 
 body {
@@ -33,14 +43,23 @@ body {
 
 
 .menu {
+  @include for-desktop{
+    display: flex;
+    flex-direction: column;
+  }
   .logo {
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
+    @include for-desktop{
+      margin-bottom: 20px;
+    }
   }
 
   .search {
-
+    @include for-desktop{
+      margin-bottom: 20px;
+    }
     span {
       font-weight: 400;
       font-size: 16px;
@@ -88,11 +107,22 @@ body {
         line-height: 73px;
         color: black;
       }
-    }
+      &:last-child{
 
-    img {
+      }
+    }
+    &.blog{
+      @include for-desktop{
+        margin:0 auto;
+      }
+    }
+    &.creativity{
+      @include for-desktop{
+        display: none;
+      }
     }
   }
+
 }
 
 .about {
@@ -106,7 +136,20 @@ body {
     &-item {
       width: 50%;
       text-align: left;
+      &.blog{
+        @include for-desktop{
+          margin:0 auto;
+          span{
+            padding-right: 0;
+          }
 
+        }
+      }
+      &.creativity{
+        @include for-desktop{
+          display: none;
+        }
+      }
       .title {
         padding-right: 120px;
       }
@@ -118,7 +161,9 @@ body {
       .info {
         width: inherit;
         padding-left: 80px;
-
+        @include for-desktop{
+          padding-left: 0;
+        }
       }
     }
   }
@@ -128,6 +173,12 @@ body {
     &-item{
       box-shadow: -1px 8px 11px -3px rgba(0,0,0,0.44);
       border-radius: 8px;
+      @include for-desktop{
+        margin-right: 18px;
+        &:first-child{
+          margin-left: 18px;
+        }
+      }
     }
   }
 }
@@ -137,6 +188,7 @@ body {
   font-size: 12px;
   line-height: 15px;
   color: $col-blue-1;
+
 }
 
 .more {
