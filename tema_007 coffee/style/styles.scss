@@ -13,10 +13,27 @@
 // mixin for responsive
 
 @mixin for-desktop {
-  @media (max-width: 990px) { @content; }
+  @media (max-width: 1280px) {
+    @content;
+  }
 }
+
 @mixin for-mini-desktop {
-  @media (max-width: 948px) { @content; }
+  @media (max-width: 1020px) {
+    @content;
+  }
+}
+
+@mixin for-phone {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin for-small-phone {
+  @media (max-width: 335px) {
+    @content;
+  }
 }
 
 
@@ -43,32 +60,39 @@ body {
 
 
 .menu {
-  @include for-desktop{
+  @include for-desktop {
     display: flex;
     flex-direction: column;
   }
+
   .logo {
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
-    @include for-desktop{
+    @include for-desktop {
       margin-bottom: 20px;
     }
   }
 
   .search {
-    @include for-desktop{
+    @include for-desktop {
       margin-bottom: 20px;
     }
+
     span {
       font-weight: 400;
       font-size: 16px;
       line-height: 19px;
       color: $col-blue-1;
     }
+
   }
 
   .social {
+    @include for-small-phone {
+      padding-left: 40px;
+    }
+
     a {
       text-decoration: none;
       color: black;
@@ -85,6 +109,7 @@ body {
 
     i {
       font-size: 24px;
+      color: $col-grey-4;
     }
   }
 }
@@ -107,17 +132,24 @@ body {
         line-height: 73px;
         color: black;
       }
-      &:last-child{
+
+      &:last-child {
 
       }
     }
-    &.blog{
-      @include for-desktop{
-        margin:0 auto;
+
+    &.blog {
+      @include for-desktop {
+        margin: 0 auto;
+        text-align: center;
+        img {
+          display: none;
+        }
       }
     }
-    &.creativity{
-      @include for-desktop{
+
+    &.creativity {
+      @include for-desktop {
         display: none;
       }
     }
@@ -136,20 +168,29 @@ body {
     &-item {
       width: 50%;
       text-align: left;
-      &.blog{
-        @include for-desktop{
-          margin:0 auto;
-          span{
+      @include for-mini-desktop {
+        width: 100%;
+      }
+      @include for-phone {
+        width: 100%;
+      }
+
+      &.blog {
+        @include for-desktop {
+          margin: 0 auto;
+          span {
             padding-right: 0;
           }
 
         }
       }
-      &.creativity{
-        @include for-desktop{
+
+      &.creativity {
+        @include for-desktop {
           display: none;
         }
       }
+
       .title {
         padding-right: 120px;
       }
@@ -161,27 +202,122 @@ body {
       .info {
         width: inherit;
         padding-left: 80px;
-        @include for-desktop{
+        @include for-desktop {
           padding-left: 0;
+          width: 100%;
         }
+
       }
     }
   }
 }
-.instructions{
-  &-list{
-    &-item{
-      box-shadow: -1px 8px 11px -3px rgba(0,0,0,0.44);
+
+.instructions {
+  &-list {
+    @include for-mini-desktop {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-item {
+      box-shadow: -1px 8px 11px -3px rgba(0, 0, 0, 0.44);
       border-radius: 8px;
-      @include for-desktop{
-        margin-right: 18px;
-        &:first-child{
+      @include for-desktop {
+        margin-right: 36px;
+        &:first-child {
           margin-left: 18px;
         }
       }
+      @include for-mini-desktop {
+        &:first-child {
+          margin-left: 0px;
+        }
+        margin-bottom: 48px;
+        margin-right: 0;
+      }
     }
   }
 }
+
+.description {
+
+  &-list {
+    border-bottom: 2px solid $col-grey-3;
+    @include for-mini-desktop {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-item {
+      width: 50%;
+@include for-mini-desktop{
+  img{
+    display: none;
+  }
+
+}
+      &:first-child {
+        background: $col-blue-3;
+      }
+
+      .info {
+        width: 31%;
+        @include for-mini-desktop{
+          width:65%;
+        }
+      }
+      .item{
+        button {
+          width: fit-content;
+          border-radius: 8px;
+          border: 1px solid $col-purple;
+          background: $col-purple;
+          color: $col-white;
+
+          span {
+            line-height: 16px;
+            font-weight: 700;
+            font-size: 16px;
+          }
+
+          i {
+            line-height: 16px;
+          }
+        }
+        @include for-mini-desktop{
+          padding-right: 0;
+          justify-content: center;
+        }
+      }
+
+    }
+  }
+}
+
+.footer {
+  @include for-mini-desktop {
+    .networking {
+      padding-right: 0;
+    }
+  }
+
+  span {
+    margin-left: 40px;
+
+    h4 {
+      margin: 0;
+    }
+  }
+
+  i {
+    font-size: 24px;
+    color: $col-grey-4;
+  }
+}
+
+
 // generals for font, font size and line-height
 
 .date {
@@ -189,6 +325,11 @@ body {
   line-height: 15px;
   color: $col-blue-1;
 
+  &.lorem {
+    font-size: 16px;
+    line-height: 19px;
+    color: $col-grey-2;
+  }
 }
 
 .more {
@@ -196,6 +337,15 @@ body {
   font-size: 12px;
   line-height: 15px;
   color: $col-blue-2;
+
+  &.lorem {
+    color: $col-black;
+    font-size: 16px;
+    line-height: 19px;
+    @include for-mini-desktop{
+      text-align: center;
+    }
+  }
 }
 
 .title {
@@ -203,7 +353,17 @@ body {
   font-size: 30px;
   line-height: 36px;
   color: $col-blue-2;
-  &.short{
+
+  &.lorem {
+    color: $col-black;
+    font-size: 40px;
+    line-height: 48px;
+    @include for-mini-desktop{
+      text-align: center;
+    }
+  }
+
+  &.short {
     font-size: 20px;
     line-height: 24px;
   }
@@ -213,4 +373,7 @@ body {
   font-size: 14px;
   line-height: 17px;
   color: $col-blue-1;
+  @include for-mini-desktop {
+    padding-left: 0px !important;
+  }
 }
