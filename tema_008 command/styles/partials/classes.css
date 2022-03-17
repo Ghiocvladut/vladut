@@ -1286,6 +1286,52 @@
   margin-top: 80px;
   margin-bottom: 80px; }
 
+.p-120 {
+  padding: 120px; }
+
+.pt-120 {
+  padding-top: 120px; }
+
+.pb-120 {
+  padding-bottom: 120px; }
+
+.pl-120 {
+  padding-left: 120px; }
+
+.pr-120 {
+  padding-right: 120px; }
+
+.px-120 {
+  padding-left: 120px;
+  padding-right: 120px; }
+
+.py-120 {
+  padding-top: 120px;
+  padding-bottom: 120px; }
+
+.m-120 {
+  margin: 120px; }
+
+.mt-120 {
+  margin-top: 120px; }
+
+.mb-120 {
+  margin-bottom: 120px; }
+
+.ml-120 {
+  margin-left: 120px; }
+
+.mr-120 {
+  margin-right: 120px; }
+
+.mx-120 {
+  margin-left: 120px;
+  margin-right: 120px; }
+
+.my-120 {
+  margin-top: 120px;
+  margin-bottom: 120px; }
+
 .p-300 {
   padding: 300px; }
 

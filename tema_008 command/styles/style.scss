@@ -57,7 +57,10 @@ body {
     &-item {
       width: 60%;
       background: $col-blue-2;
-
+      border-radius: 8px;
+      //&:first-child{
+      //  border-bottom: 1px solid $col-grey-1;
+      //}
       &:last-child {
         width: 40%;
       }
@@ -112,4 +115,13 @@ body {
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
+}
+
+
+// button
+
+.cta{
+  background: $col-blue-3;
+  border-radius: 10px;
+  border:1px solid $col-blue-3;
 }

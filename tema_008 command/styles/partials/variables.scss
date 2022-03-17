@@ -1,6 +1,6 @@
 // variables
 
-
+$col-white:#FFFFFF;
 $col-grey-1: #E2E8F0;
 $col-grey-2: #718096;
 $col-blue-1: #4A5568;
@@ -10,6 +10,10 @@ $col-blue-4: #2D3748;
 
 
 // classes for variables
+
+.col-white{
+  color:$col-white;
+}
 
 .col-grey-1 {
   color: $col-grey-1;

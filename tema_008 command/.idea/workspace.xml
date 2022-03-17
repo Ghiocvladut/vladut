@@ -2,11 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da3276da-d51b-4b5e-aef2-bbeec9038801" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/partials/classes.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/partials/general.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/partials/variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/css/fontello-codes.css" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/css/fontello-codes.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/css/fontello-embedded.css" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/css/fontello-embedded.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/css/fontello-ie7-codes.css" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/css/fontello-ie7-codes.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/css/fontello-ie7.css" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/css/fontello-ie7.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/css/fontello.css" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/css/fontello.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/demo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font/fontello.eot" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/font/fontello.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font/fontello.svg" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/font/fontello.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font/fontello.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/font/fontello.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font/fontello.woff" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/font/fontello.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font/fontello.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/font/fontello.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/partials/classes.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/partials/classes.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/partials/classes.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/styles/partials/classes.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/partials/classes.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/partials/classes.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/partials/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/partials/variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/styles/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/style.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +79,7 @@
       <workItem from="1647525567019" duration="17000" />
       <workItem from="1647525595310" duration="158000" />
       <workItem from="1647525770653" duration="24000" />
-      <workItem from="1647525803884" duration="6370000" />
+      <workItem from="1647525803884" duration="7779000" />
     </task>
     <servers />
   </component>
