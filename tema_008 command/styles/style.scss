@@ -1,0 +1,89 @@
+// font import
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
+
+// import css
+
+@import "partials/generals";
+
+@import "partials/classes";
+
+@import "partials/variables";
+
+@import "../fonts/css/fontello.css";
+
+// general
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+
+// main css
+
+
+.header {
+  border-bottom: 1px solid $col-grey-1;
+
+  .menu {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+    }
+  }
+
+  .account {
+    &-item {
+      span {
+        font-size: 16px;
+        line-height: 19px;
+      }
+
+      i {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.order{
+  height: 100vh;
+  &-list{
+    &-item{
+      width: 60%;
+      background: $col-blue-2;
+      &:last-child{
+        width: 40%;
+      }
+      > div{
+        .line{
+          &:after{
+            width: 24px;
+            height: 1px;
+            content:"";
+            position: absolute;
+            background: $col-blue-3;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+  // font
+.font-500-16-19 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+
