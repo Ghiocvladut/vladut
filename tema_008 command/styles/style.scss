@@ -64,6 +64,7 @@ body {
       &:last-child {
         width: 40%;
       }
+
       > div {
         .line {
           &:after {
@@ -76,27 +77,52 @@ body {
         }
 
       }
-      .form{
-        form{
-          i{
-            position:relative;
-            right:-410px;
+
+      .form {
+        form {
+          i {
+            position: relative;
+            right: -410px;
             top: 40px;
             font-size: 18px;
           }
-          label{}
-          input{
+
+          label {
+          }
+
+          input {
             border-radius: 6px;
-            background:$col-grey-1;
-            border:1px solid $col-grey-1;
-            ::placeholder{
-              color:purple;
+            background: $col-grey-1;
+            border: 1px solid $col-grey-1;
+
+            ::placeholder {
+              color: purple;
             }
           }
-          input::placeholder{
-            color:$col-blue-4;
+
+          input::placeholder {
+            color: $col-blue-4;
           }
         }
+      }
+
+      .pieces {
+        &-details {
+          .cost {
+            font-weight: bold;
+          }
+        }
+
+        &-amount {
+          .item {
+            background: $col-grey-1;
+            border-radius: 6px;
+          }
+        }
+      }
+      .promo{
+        background: $col-grey-1;
+        border-radius: 8px;
       }
     }
   }
@@ -117,11 +143,25 @@ body {
   line-height: 24px;
 }
 
+.font-500-18-22{
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.bold{
+  font-weight: bold;
+}
+
 
 // button
 
-.cta{
+.cta {
   background: $col-blue-3;
   border-radius: 10px;
-  border:1px solid $col-blue-3;
+  border: 1px solid $col-blue-3;
+  &.apply{
+    background: $col-white;
+    border:2px solid $col-blue-3;
+  }
 }

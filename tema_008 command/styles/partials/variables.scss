@@ -7,7 +7,7 @@ $col-blue-1: #4A5568;
 $col-blue-2: #F7FAFC;
 $col-blue-3: #3182CE;
 $col-blue-4: #2D3748;
-
+$col-green:#38B2AC;
 
 // classes for variables
 
@@ -37,5 +37,9 @@ $col-blue-4: #2D3748;
 
 .col-blue-4 {
   color: $col-blue-4;
+}
+
+.col-green{
+  color:$col-green;
 }
 

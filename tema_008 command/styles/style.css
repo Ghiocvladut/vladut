@@ -1434,6 +1434,9 @@
 .col-blue-4 {
   color: #2D3748; }
 
+.col-green {
+  color: #38B2AC; }
+
 body {
   margin: 0;
   padding: 0;
@@ -1478,6 +1481,14 @@ body {
         color: purple; }
     .order-list-item .form form input::placeholder {
       color: #2D3748; }
+    .order-list-item .pieces-details .cost {
+      font-weight: bold; }
+    .order-list-item .pieces-amount .item {
+      background: #E2E8F0;
+      border-radius: 6px; }
+    .order-list-item .promo {
+      background: #E2E8F0;
+      border-radius: 8px; }
 
 .font-500-16-19 {
   font-weight: 500;
@@ -1489,9 +1500,20 @@ body {
   font-size: 20px;
   line-height: 24px; }
 
+.font-500-18-22 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px; }
+
+.bold {
+  font-weight: bold; }
+
 .cta {
   background: #3182CE;
   border-radius: 10px;
   border: 1px solid #3182CE; }
+  .cta.apply {
+    background: #FFFFFF;
+    border: 2px solid #3182CE; }
 
 /*# sourceMappingURL=style.css.map */
