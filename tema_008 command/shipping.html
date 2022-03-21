@@ -24,10 +24,10 @@
                 <span class="font-500-16-19 col-blue-1 pointer">Activity</span>
                 <i class="demo-icon icon-arrow-down-s-fill-1 pointer"></i>
                 <div class="submenu1 flex-column">
-                    <a href="index.html" class="active">
+                    <a href="index.html">
                         <span class="font-500-16-19 col-blue-1">Account</span>
                     </a>
-                    <a href="shipping.html">
+                    <a href="shipping.html" class="active">
                         <span class="font-500-16-19 col-blue-1">Shipping</span>
                     </a>
                     <a href="payment.html">
@@ -56,26 +56,44 @@
                 <span class="line col-blue-3 pr-20"></span>
                 <i class="demo-icon icon-checkbox-circle-fill-3 ml-10 mr-8 pointer"></i>
                 <span class="line col-blue-3 pr-20"></span>
-                <span class="ml-10 mr-10 col-blue-4 stage font-500-20-24">Shipping</span>
+                <span class="ml-10 mr-10 col-blue-3 stage font-500-20-24">Shipping</span>
                 <span class="line col-blue-3 pr-20"></span>
                 <i class="demo-icon icon-checkbox-circle-fill-3 ml-10 mr-8 pointer"></i>
                 <span class="line col-blue-3 pr-20"></span>
                 <span class="ml-10 col-blue-4 stage font-500-20-24">Payment</span>
             </div>
-            <div class="form flex-column mb-36">
-                <span class="font-500-20-24 pr-300 mb-30">Account details</span>
+            <div class="form flex-column mb-36 payment">
+                <span class="font-500-20-24 pr-300 mb-30">Shipping details</span>
+                <div class="flex-center mb-36">
+                    <span class="font-500-16-19 col-blue-4 flex-1">Use saved address</span>
+                    <i class="demo-icon icon-arrow-down-s-fill-1 pointer down"></i>
+                    <input type="text" class="p-20 mb-12 font-500-16-19 address" placeholder="123 , Electric avenue">
+                </div>
                 <form action="" class="flex-column">
-                    <label for="email" class="font-500-16-19 col-grey-2 pointer">Email address</label>
-                    <i class="demo-icon icon-checkbox-circle-fill-3 email"></i>
-                    <input type="email" id="email" class="p-20 mb-12 font-500-16-19" placeholder="Email@myemail.com">
-                    <label for="password" class="font-500-16-19 col-grey-2 pointer">Password</label>
-                    <i class="demo-icon icon-checkbox-circle-fill-3 email"></i>
-                    <input type="password" id="password" class="p-20 mb-12 font-500-16-19" placeholder="********">
+                    <label for="email" class="font-500-16-19 col-grey-2 pointer">First line of address</label>
+                    <i class="demo-icon icon-checkbox-circle-fill-3 payment"></i>
+                    <input type="email" id="email" class="p-20 mb-12 font-500-16-19" placeholder="123">
+                    <label for="password" class="font-500-16-19 col-grey-2 pointer">Street name</label>
+                    <i class="demo-icon icon-checkbox-circle-fill-3 payment"></i>
+                    <input type="password" id="password" class="p-20 mb-12 font-500-16-19"
+                           placeholder="Electric avenue">
+                    <div class="post flex-center">
+                        <div class="post-item flex-column mr-36">
+                            <label for="postcode" class="font-500-16-19 col-grey-2 pointer">Postcode</label>
+                            <input type="text" id="postcode" class="mt-18 p-20 font-500-16-19" placeholder="ABC - 123">
+                        </div>
+                        <div class="post-item flex-column">
+                            <label for="delivery" class="font-500-16-19 col-grey-2 pointer">Select shipping</label>
+                            <input type="text" id="delivery" placeholder="Free delivery" class="mt-18 p-20 font-500-16-19">
+                        </div>
+                    </div>
+                    <i class="demo-icon icon-arrow-down-s-fill-1 pointer down delivery"></i>
+
                 </form>
             </div>
-            <div class="register ml-120 pb-80">
-                <span class="font-500-16-19 col-blue-4 mr-30 pointer">Register for account</span>
-                <button class="cta px-50 py-20 col-white font-500-16-19 pointer">Login</button>
+            <div class="register ml-190 pb-80">
+                <span class="font-500-16-19 col-blue-4 mr-30 pointer">Cancel order</span>
+                <button class="cta px-60 py-20 col-white font-500-16-19 pointer">Payment</button>
             </div>
         </div>
         <div class="order-list-item py-36 px-45 ml-20 flex-column">

@@ -1,32 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap");
 @import url(../fonts/css/fontello.css);
-.col-white {
-  color: #FFFFFF; }
-
-.col-grey-1 {
-  color: #E2E8F0; }
-
-.col-grey-2 {
-  color: #718096; }
-
-.col-blue-1 {
-  color: #4A5568; }
-
-.col-blue-2 {
-  color: #F7FAFC; }
-
-.col-blue-3 {
-  color: #3182CE; }
-
-.col-blue-4 {
-  color: #2D3748; }
-
-.col-green {
-  color: #38B2AC; }
-
-.x {
-  color: #FFFFFF; }
-
 .d-flex {
   display: flex; }
 
@@ -1072,6 +1045,52 @@
   margin-top: 40px;
   margin-bottom: 40px; }
 
+.p-44 {
+  padding: 44px; }
+
+.pt-44 {
+  padding-top: 44px; }
+
+.pb-44 {
+  padding-bottom: 44px; }
+
+.pl-44 {
+  padding-left: 44px; }
+
+.pr-44 {
+  padding-right: 44px; }
+
+.px-44 {
+  padding-left: 44px;
+  padding-right: 44px; }
+
+.py-44 {
+  padding-top: 44px;
+  padding-bottom: 44px; }
+
+.m-44 {
+  margin: 44px; }
+
+.mt-44 {
+  margin-top: 44px; }
+
+.mb-44 {
+  margin-bottom: 44px; }
+
+.ml-44 {
+  margin-left: 44px; }
+
+.mr-44 {
+  margin-right: 44px; }
+
+.mx-44 {
+  margin-left: 44px;
+  margin-right: 44px; }
+
+.my-44 {
+  margin-top: 44px;
+  margin-bottom: 44px; }
+
 .p-45 {
   padding: 45px; }
 
@@ -1394,6 +1413,52 @@
   margin-top: 120px;
   margin-bottom: 120px; }
 
+.p-190 {
+  padding: 190px; }
+
+.pt-190 {
+  padding-top: 190px; }
+
+.pb-190 {
+  padding-bottom: 190px; }
+
+.pl-190 {
+  padding-left: 190px; }
+
+.pr-190 {
+  padding-right: 190px; }
+
+.px-190 {
+  padding-left: 190px;
+  padding-right: 190px; }
+
+.py-190 {
+  padding-top: 190px;
+  padding-bottom: 190px; }
+
+.m-190 {
+  margin: 190px; }
+
+.mt-190 {
+  margin-top: 190px; }
+
+.mb-190 {
+  margin-bottom: 190px; }
+
+.ml-190 {
+  margin-left: 190px; }
+
+.mr-190 {
+  margin-right: 190px; }
+
+.mx-190 {
+  margin-left: 190px;
+  margin-right: 190px; }
+
+.my-190 {
+  margin-top: 190px;
+  margin-bottom: 190px; }
+
 .p-300 {
   padding: 300px; }
 
@@ -1494,6 +1559,33 @@ body {
     @media (max-width: 1110px) {
       .header .menu ul li:last-child {
         margin-right: 0; } }
+  @media (max-width: 1110px) {
+    .header .step {
+      margin-bottom: 24px; } }
+  .header .step .menu1 {
+    list-style: none;
+    margin: 0px;
+    padding: 0px; }
+    .header .step .menu1 li {
+      text-align: center; }
+      .header .step .menu1 li:hover .submenu1 {
+        display: block;
+        flex-direction: column; }
+    .header .step .menu1 .submenu1 {
+      display: none;
+      margin-top: 12px; }
+      .header .step .menu1 .submenu1 a {
+        outline: none;
+        text-decoration: none;
+        color: #000000;
+        margin-right: 12px; }
+        .header .step .menu1 .submenu1 a span {
+          opacity: 0.55; }
+          .header .step .menu1 .submenu1 a span:hover {
+            opacity: 1; }
+        .header .step .menu1 .submenu1 a.active span {
+          opacity: 1;
+          color: rgba(0, 0, 0, 0.8); }
   .header .account-item span {
     font-size: 16px;
     line-height: 19px; }
@@ -1525,6 +1617,8 @@ body {
     content: "";
     position: absolute;
     background: #3182CE; }
+  .order-list-item .form.payment {
+    border-bottom: 1px solid #E2E8F0; }
   @media (max-width: 599px) {
     .order-list-item .form {
       padding-right: 0; }
@@ -1536,6 +1630,11 @@ body {
     right: -410px;
     top: 40px;
     font-size: 18px; }
+    .order-list-item .form form i.payment {
+      right: -470px; }
+  @media (max-width: 660px) {
+    .order-list-item .form form label {
+      margin-bottom: 12px; } }
   .order-list-item .form form input {
     border-radius: 6px;
     background: #E2E8F0;
@@ -1548,6 +1647,8 @@ body {
         padding-right: 0; } }
   .order-list-item .form form input::placeholder {
     color: #2D3748; }
+  .order-list-item .form form .post {
+    padding-bottom: 36px; }
   @media (max-width: 435px) {
     .order-list-item .pieces {
       display: flex;
@@ -1591,6 +1692,22 @@ body {
   @media (max-width: 599px) and (max-width: 599px) {
     .order-list-item .activity .line {
       display: none; } }
+
+  .order-list-item .down {
+    position: relative;
+    right: -225px;
+    top: -6px;
+    font-size: 24px; }
+    .order-list-item .down.delivery {
+      right: -465px;
+      top: -80px;
+      font-size: 24px; }
+  .order-list-item .address {
+    border-radius: 6px;
+    background: #E2E8F0;
+    border: 1px solid #E2E8F0; }
+  .order-list-item .address::placeholder {
+    color: #2D3748; }
 
 .font-500-16-19 {
   font-weight: 500;

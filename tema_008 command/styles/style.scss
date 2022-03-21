@@ -12,7 +12,6 @@
 
 @import "../fonts/css/fontello.css";
 
-
 // mixins
 
 @mixin for-desktop-up {
@@ -93,7 +92,48 @@ body {
       }
     }
   }
+  .step{
+    @include for-desktop-up{
+      margin-bottom: 24px;
+    }
+    .menu1{
+      list-style:none;
+      margin:0px;
+      padding:0px;
+      li{
+        text-align: center;
+        &:hover{
+          .submenu1{
+            display: block;
+            flex-direction: column;
+          }
+        }
+      }
+      .submenu1{
+        display: none;
+        margin-top: 12px;
+        a{
+          outline: none;
+          text-decoration: none;
+          color: $col-black;
+          margin-right: 12px;
+          span{
+            opacity:0.55;
+            &:hover{
+              opacity: 1;
+            }
+          }
+          &.active{
+            span{
+              opacity: 1;
+              color:rgba($col-black,0.8);
+            }
+          }
 
+        }
+      }
+    }
+  }
   .account {
     &-item {
       span {
@@ -150,6 +190,9 @@ body {
       }
 
       .form {
+        &.payment{
+          border-bottom: 1px solid $col-grey-1;
+        }
         @include for-phone-only {
           padding-right: 0;
           span {
@@ -164,9 +207,15 @@ body {
             right: -410px;
             top: 40px;
             font-size: 18px;
+            &.payment{
+              right:-470px;
+            }
           }
 
           label {
+            @include for-tablet-portrait-up{
+              margin-bottom: 12px;
+            }
           }
 
           input {
@@ -184,6 +233,9 @@ body {
 
           input::placeholder {
             color: $col-blue-4;
+          }
+          .post{
+            padding-bottom: 36px;
           }
         }
       }
@@ -256,9 +308,29 @@ body {
           }
         }
       }
+      .down{
+          position: relative;
+          right: -225px;
+          top: -6px;
+          font-size: 24px;
+        &.delivery{
+          right: -465px;
+          top: -80px;
+          font-size: 24px;
+        }
+      }
+      .address{
+        border-radius: 6px;
+        background: $col-grey-1;
+        border: 1px solid $col-grey-1;
+      }
+      .address::placeholder {
+        color: $col-blue-4;
+      }
     }
   }
 }
+
 
 
 // font
