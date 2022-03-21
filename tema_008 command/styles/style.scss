@@ -12,6 +12,40 @@
 
 @import "../fonts/css/fontello.css";
 
+
+// mixins
+
+@mixin for-desktop-up {
+  @media (max-width: 1110px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-portrait-up {
+  @media (max-width: 660px) {
+    @content;
+  }
+}
+
+
+@mixin for-phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin for-mini-phone {
+  @media (max-width: 465px) {
+    @content;
+  }
+}
+
+@mixin for-small-phone {
+  @media (max-width: 435px) {
+    @content;
+  }
+}
+
 // general
 
 body {
@@ -26,13 +60,37 @@ body {
 
 .header {
   border-bottom: 1px solid $col-grey-1;
+  @include for-desktop-up {
+    display: flex;
+    flex-direction: column;
+  }
 
   .menu {
+    @include for-desktop-up {
+      margin-bottom: 24px;
+      margin-top: 24px;
+    }
+
+
     ul {
       margin: 0;
       padding: 0;
       list-style: none;
-
+      @include for-small-phone{
+        display: flex;
+        flex-direction: column;
+      }
+      li {
+        @include for-small-phone{
+          margin-right: 0;
+          margin-bottom:12px;
+        }
+        &:last-child {
+          @include for-desktop-up {
+            margin-right: 0;
+          }
+        }
+      }
     }
   }
 
@@ -51,18 +109,31 @@ body {
 }
 
 .order {
-  height: 100vh;
 
   &-list {
+    @include for-desktop-up {
+      flex-direction: column;
+      display: flex;
+    }
+
     &-item {
-      width: 60%;
+      width: 75%;
       background: $col-blue-2;
       border-radius: 8px;
+      @include for-desktop-up {
+        width: auto;
+        margin-right: 0;
+        margin-bottom: 40px;
+      }
       //&:first-child{
       //  border-bottom: 1px solid $col-grey-1;
       //}
       &:last-child {
-        width: 40%;
+        width: 25%;
+        @include for-desktop-up {
+          width: auto;
+          margin-left: 0;
+        }
       }
 
       > div {
@@ -79,6 +150,14 @@ body {
       }
 
       .form {
+        @include for-phone-only {
+          padding-right: 0;
+          span {
+            padding: 0;
+            text-align: center;
+          }
+        }
+
         form {
           i {
             position: relative;
@@ -94,10 +173,13 @@ body {
             border-radius: 6px;
             background: $col-grey-1;
             border: 1px solid $col-grey-1;
-
-            ::placeholder {
-              color: purple;
+            @include for-phone-only {
+              width: 100%;
             }
+            @include for-mini-phone {
+              padding-right: 0;
+            }
+
           }
 
           input::placeholder {
@@ -107,22 +189,72 @@ body {
       }
 
       .pieces {
+        @include for-small-phone{
+          display: flex;
+          flex-direction: column;
+        }
         &-details {
+          @include for-small-phone{
+            text-align: center;
+          }
           .cost {
             font-weight: bold;
           }
         }
 
         &-amount {
+          @include for-small-phone{
+            margin-bottom: 24px;
+          }
           .item {
             background: $col-grey-1;
             border-radius: 6px;
           }
         }
       }
-      .promo{
+
+      .promo {
         background: $col-grey-1;
         border-radius: 8px;
+      }
+
+      .register {
+        @include for-tablet-portrait-up {
+          display: flex;
+          flex-direction: column;
+          margin-left: 0;
+          span {
+            margin-bottom: 16px;
+            text-align: center;
+            margin-right: 0;
+          }
+        }
+      }
+
+      .email {
+        @include for-tablet-portrait-up {
+          display: none;
+        }
+      }
+
+      .activity {
+        @include for-phone-only {
+          display: flex;
+          flex-direction: column;
+          span {
+            margin-right: 0;
+            margin-left: 0;
+            margin-bottom: 12px;
+          }
+          i {
+            margin-bottom: 12px;
+          }
+          .line {
+            @include for-phone-only {
+              display: none;
+            }
+          }
+        }
       }
     }
   }
@@ -143,13 +275,13 @@ body {
   line-height: 24px;
 }
 
-.font-500-18-22{
+.font-500-18-22 {
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
 }
 
-.bold{
+.bold {
   font-weight: bold;
 }
 
@@ -160,8 +292,9 @@ body {
   background: $col-blue-3;
   border-radius: 10px;
   border: 1px solid $col-blue-3;
-  &.apply{
+
+  &.apply {
     background: $col-white;
-    border:2px solid $col-blue-3;
+    border: 2px solid $col-blue-3;
   }
 }

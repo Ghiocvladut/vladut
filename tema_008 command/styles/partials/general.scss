@@ -1,6 +1,10 @@
 // flex properties
+@import "variables";
 
 
+.x{
+  color: $col-white;
+}
 .d-flex {
   display: flex;
 }

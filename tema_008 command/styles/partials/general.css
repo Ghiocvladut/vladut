@@ -1,0 +1,61 @@
+.col-white {
+  color: #FFFFFF; }
+
+.col-grey-1 {
+  color: #E2E8F0; }
+
+.col-grey-2 {
+  color: #718096; }
+
+.col-blue-1 {
+  color: #4A5568; }
+
+.col-blue-2 {
+  color: #F7FAFC; }
+
+.col-blue-3 {
+  color: #3182CE; }
+
+.col-blue-4 {
+  color: #2D3748; }
+
+.col-green {
+  color: #38B2AC; }
+
+.x {
+  color: #FFFFFF; }
+
+.d-flex {
+  display: flex; }
+
+.flex-center {
+  display: flex;
+  align-items: center; }
+
+.flex-column {
+  display: flex;
+  flex-direction: column; }
+
+.justify-space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.justify-flex-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; }
+
+.justify-center {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.flex-1 {
+  display: flex;
+  flex: 1; }
+
+.pointer {
+  cursor: pointer; }
+
+/*# sourceMappingURL=general.css.map */
