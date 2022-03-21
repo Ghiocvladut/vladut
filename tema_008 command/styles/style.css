@@ -30,6 +30,9 @@
   display: flex;
   flex: 1; }
 
+.text-center {
+  text-align: center; }
+
 .pointer {
   cursor: pointer; }
 
@@ -1617,6 +1620,17 @@ body {
     content: "";
     position: absolute;
     background: #3182CE; }
+  @media (max-width: 660px) {
+    .order-list-item .detail {
+      text-align: center;
+      padding-right: 0; } }
+  @media (max-width: 660px) {
+    .order-list-item .saved {
+      flex-direction: column; }
+      .order-list-item .saved .down {
+        display: none; }
+      .order-list-item .saved span {
+        margin-bottom: 24px; } }
   .order-list-item .form.payment {
     border-bottom: 1px solid #E2E8F0; }
   @media (max-width: 599px) {
@@ -1632,6 +1646,14 @@ body {
     font-size: 18px; }
     .order-list-item .form form i.payment {
       right: -470px; }
+      @media (max-width: 599px) {
+        .order-list-item .form form i.payment {
+          display: none; } }
+    .order-list-item .form form i.card {
+      right: -652px; }
+    .order-list-item .form form i.cvc {
+      top: 0;
+      left: 0; }
   @media (max-width: 660px) {
     .order-list-item .form form label {
       margin-bottom: 12px; } }
@@ -1639,16 +1661,27 @@ body {
     border-radius: 6px;
     background: #E2E8F0;
     border: 1px solid #E2E8F0; }
-    @media (max-width: 599px) {
-      .order-list-item .form form input {
-        width: 100%; } }
     @media (max-width: 465px) {
       .order-list-item .form form input {
         padding-right: 0; } }
+    @media (max-width: 860px) {
+      .order-list-item .form form input {
+        width: fit-content; } }
   .order-list-item .form form input::placeholder {
     color: #2D3748; }
   .order-list-item .form form .post {
     padding-bottom: 36px; }
+    @media (max-width: 599px) {
+      .order-list-item .form form .post {
+        flex-direction: column; } }
+    @media (max-width: 599px) {
+      .order-list-item .form form .post-item:first-child {
+        margin-right: 0; } }
+    @media (max-width: 465px) {
+      .order-list-item .form form .post-item:last-child {
+        margin-top: 24px; } }
+  .order-list-item .form form .r-bar {
+    font-size: 30px; }
   @media (max-width: 435px) {
     .order-list-item .pieces {
       display: flex;

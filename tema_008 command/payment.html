@@ -3,8 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-
+<div class="header px-60 py-36 flex-center justify-space-between">
+    <div class="logo">
+        <img src="images/logo.png" alt="">
+    </div>
+    <div class="menu flex-center">
+        <ul class="flex-center">
+            <li class="mr-75 pointer font-500-16-19 col-blue-1">Home</li>
+            <li class="mr-75 pointer font-500-16-19 col-blue-1">Shop</li>
+            <li class="mr-75 pointer font-500-16-19 col-blue-1">Contact</li>
+            <li class="mr-75 pointer font-500-16-19 col-blue-1">Help</li>
+        </ul>
+    </div>
+    <div class="step">
+        <ul class="menu1">
+            <li>
+                <span class="font-500-16-19 col-blue-1 pointer">Details</span>
+                <i class="demo-icon icon-arrow-down-s-fill-1 pointer"></i>
+                <div class="submenu1 flex-column">
+                    <a href="index.html">
+                        <span class="font-500-16-19 col-blue-1">Account</span>
+                    </a>
+                    <a href="shipping.html">
+                        <span class="font-500-16-19 col-blue-1">Shipping</span>
+                    </a>
+                    <a href="payment.html" class="active">
+                        <span class="font-500-16-19 col-blue-1">Payment</span>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="account flex-center">
+        <div class="account-item mr-50 flex-center">
+            <span class="mr-6 font-500-16-19 col-blue-1">Account</span>
+            <i class="demo-icon icon-arrow-down-s-fill-1 pointer"></i>
+        </div>
+        <div class="account-item flex-center">
+            <i class="demo-icon icon-shopping-bag-line-1 pointer"></i>
+            <span class="ml-8">3 items</span>
+        </div>
+    </div>
+</div>
+<div class="order px-60 py-48">
+    <div class="order-list d-flex">
+        <div class="order-list-item p-36 justify-center mr-20 flex-column">
+            <div class="flex-center mb-40 activity">
+                <span class="mr-10 col-blue-3 font-500-20-24">Account</span>
+                <span class="line col-blue-3 pr-20"></span>
+                <i class="demo-icon icon-checkbox-circle-fill-3 ml-10 mr-8 pointer"></i>
+                <span class="line col-blue-3 pr-20"></span>
+                <span class="ml-10 mr-10 col-blue-3 stage font-500-20-24">Shipping</span>
+                <span class="line col-blue-3 pr-20"></span>
+                <i class="demo-icon icon-checkbox-circle-fill-3 ml-10 mr-8 pointer"></i>
+                <span class="line col-blue-3 pr-20"></span>
+                <span class="ml-10 col-blue-3 stage font-500-20-24">Payment</span>
+            </div>
+            <div class="form flex-column mb-36 payment card">
+                <span class="font-500-20-24 pr-300 mb-30">Payment details</span>
+                <div class="flex-center mb-36">
+                    <span class="font-500-16-19 col-blue-4 flex-1">Use saved card</span>
+                    <i class="demo-icon icon-arrow-down-s-fill-1 pointer down"></i>
+                    <input type="text" class="p-20 mb-12 font-500-16-19 address" placeholder="Mastercard ending 234">
+                </div>
+                <form action="" class="flex-column">
+                    <label for="email" class="font-500-16-19 col-grey-2 pointer">Name on card</label>
+                    <i class="demo-icon icon-checkbox-circle-fill-3 card"></i>
+                    <input type="email" id="email" class="p-20 mb-12 font-500-16-19" placeholder="John Smith">
+                    <label for="password" class="font-500-16-19 col-grey-2 pointer mb-12">Card number</label>
+                    <input type="password" id="password" class="p-20 mb-12 font-500-16-19" placeholder="123 - 456 -">
+                    <div class="post flex-center">
+                        <div class="post-item flex-column mr-36">
+                            <label for="" class="font-500-16-19 col-grey-2 pointer mb-12">Expiration</label>
+                            <div class="flex-center">
+                                <input type="text" placeholder="03" class="p-20 mr-8 text-center">
+                                <span class="col-grey-2 r-bar">/</span>
+                                <input type="text" placeholder="24" class="p-20 ml-8 text-center">
+                            </div>
+                        </div>
+                        <div class="post-item flex-column">
+                            <label for="delivery" class="font-500-16-19 col-grey-2 pointer">
+                                CVC
+                                <i class="demo-icon icon-question-line-1 cvc"></i>
+                            </label>
+                            <input type="text" id="delivery" placeholder="Free delivery" class="mt-18 p-20 font-500-16-19">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="register ml-190 pb-80">
+                <span class="font-500-16-19 col-blue-4 mr-30 pointer">Cancel order</span>
+                <button class="cta px-60 py-20 col-white font-500-16-19 pointer">Payment</button>
+            </div>
+        </div>
+        <div class="order-list-item py-36 px-45 ml-20 flex-column">
+            <span class="font-500-20-24 mb-20">Order Summary</span>
+            <img src="images/headphones.png" alt="" class="mb-20">
+            <div class="pieces flex-center">
+                <div class="pieces-details flex-column flex-1">
+                    <span class="font-500-20-24 mb-14">Sony wireless headphones</span>
+                    <span class="mb-32 cost font-500-20-24">£320.45</span>
+                </div>
+                <div class="pieces-amount flex-center">
+                    <div class="item p-8 mr-20 pointer">
+                        <i class="demo-icon icon-subtract-fill-1 col-grey-2 pointer"></i>
+                    </div>
+                    <span class="font-500-20-24">1</span>
+                    <div class="item p-8 ml-20 pointer">
+                        <i class="demo-icon icon-add-line-1 col-grey-2 pointer"></i>
+                    </div>
+                </div>
+            </div>
+            <span class="font-500-16-19 col-grey-2 mb-22">Gift Card / Discount code</span>
+            <div class="flex-center mb-50">
+                <div class="mr-26 flex-1 promo pointer" style="height: 60px;"></div>
+                <button class="cta apply px-40 py-20 col-blue-3 font-500-16-19 pointer">Apply</button>
+            </div>
+            <div class="flex-center mb-40">
+                <span class="flex-1 font-500-18-22 col-blue-1">Sub total</span>
+                <span class="font-500-20-24 col-blue-4">£316.55</span>
+            </div>
+            <div class="flex-center mb-40">
+                <span class="flex-1 font-500-18-22 col-blue-1">Tax</span>
+                <span class="font-500-20-24 col-blue-4">£3.45</span>
+            </div>
+            <div class="flex-center mb-40">
+                <span class="flex-1 font-500-18-22 col-blue-1">Shipping</span>
+                <span class="col-green font-500-20-24">Free</span>
+            </div>
+            <div class="flex-center">
+                <span class="flex-1 bold font-500-18-22 col-blue-1">Total</span>
+                <span class="font-500-20-24 col-blue-4">£320.45</span>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

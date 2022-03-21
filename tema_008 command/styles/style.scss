@@ -26,6 +26,12 @@
   }
 }
 
+@mixin for-medium-tablet{
+  @media (max-width: 860px) {
+    @content;
+  }
+}
+
 
 @mixin for-phone-only {
   @media (max-width: 599px) {
@@ -188,7 +194,23 @@ body {
         }
 
       }
-
+      .detail{
+        @include for-tablet-portrait-up{
+          text-align: center;
+          padding-right: 0;
+        }
+      }
+        .saved{
+          @include for-tablet-portrait-up{
+            flex-direction: column;
+            .down{
+              display: none;
+            }
+            span{
+              margin-bottom: 24px;
+            }
+          }
+        }
       .form {
         &.payment{
           border-bottom: 1px solid $col-grey-1;
@@ -200,7 +222,6 @@ body {
             text-align: center;
           }
         }
-
         form {
           i {
             position: relative;
@@ -209,6 +230,16 @@ body {
             font-size: 18px;
             &.payment{
               right:-470px;
+              @include for-phone-only{
+                display: none;
+              }
+            }
+            &.card{
+              right:-652px;
+            }
+            &.cvc{
+              top:0;
+              left:0;
             }
           }
 
@@ -222,11 +253,12 @@ body {
             border-radius: 6px;
             background: $col-grey-1;
             border: 1px solid $col-grey-1;
-            @include for-phone-only {
-              width: 100%;
-            }
+
             @include for-mini-phone {
               padding-right: 0;
+            }
+            @include for-medium-tablet{
+              width: fit-content;
             }
 
           }
@@ -236,6 +268,24 @@ body {
           }
           .post{
             padding-bottom: 36px;
+            @include for-phone-only{
+              flex-direction: column;
+            }
+            &-item{
+              &:first-child{
+                @include for-phone-only{
+                  margin-right: 0;
+                }
+              }
+              &:last-child{
+                @include for-mini-phone{
+                  margin-top: 24px;
+                }
+              }
+            }
+          }
+          .r-bar{
+            font-size:30px;
           }
         }
       }
