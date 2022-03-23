@@ -1639,6 +1639,10 @@ body {
       .order-list-item .form span {
         padding: 0;
         text-align: center; } }
+  @media (max-width: 860px) {
+    .order-list-item .form form {
+      justify-content: center;
+      align-items: center; } }
   .order-list-item .form form i {
     position: relative;
     right: -410px;

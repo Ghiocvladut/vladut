@@ -223,6 +223,10 @@ body {
           }
         }
         form {
+          @include for-medium-tablet{
+            justify-content: center;
+            align-items: center;
+          }
           i {
             position: relative;
             right: -410px;
