@@ -91,7 +91,7 @@ body {
 
 .hero {
   &-image {
-    z-index: -1;
+
 
     img {
       opacity: 0.85;
@@ -131,7 +131,7 @@ body {
           color: $col-black;
           border-radius: 8px;
           padding-top: 24px;
-          padding-bottom:48px;
+          padding-bottom: 48px;
 
           form {
             display: flex;
@@ -163,14 +163,7 @@ body {
               margin-bottom: 24px;
             }
 
-            .cta {
-              background: $col-brand;
-              color: $col-white;
-              margin-top: 24px;
-              padding: 20px;
-              border-radius: 8px;
-              border: 1px solid $col-brand;
-            }
+
           }
         }
       }
@@ -182,12 +175,15 @@ body {
 .services {
   background: $col-grey-1;
   padding-top: 120px;
+  padding-bottom: 120px;
+
   .title {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     margin-bottom: 60px;
+
     span {
       margin-bottom: 12px;
       color: $col-brand;
@@ -198,14 +194,17 @@ body {
   &-body {
     display: flex;
     flex-direction: column;
+
     &-content {
       display: flex;
       align-items: center;
       justify-content: space-between;
-        &:first-child{
-          margin-bottom: 60px;
-        }
-      .item{
+
+      &:first-child {
+        margin-bottom: 60px;
+      }
+
+      .item {
         border-radius: 8px;
         background: $col-white;
         padding: 24px;
@@ -214,8 +213,151 @@ body {
   }
 }
 
+.call {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background: rgba($col-brand, 0.90);
+
+  &-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: $col-white;
+
+    h1 {
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.plan {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  &-body {
+    &-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 60px;
+
+      &-item {
+        div {
+          font-size: 40px;
+          font-weight: 600;
+        }
+
+        &:first-child {
+          border-radius: 8px;
+          margin-right: 40px;
+        }
+
+        &:last-child {
+          margin-left: 40px;
+        }
+
+
+      }
+
+    }
+  }
+}
+
+.price {
+  padding-top: 60px;
+  padding-bottom: 120px;
+  background: $col-grey-1;
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 80px;
+
+    span {
+      margin-bottom: 12px;
+      color: $col-brand;
+      font-weight: 600;
+    }
+  }
+
+  &-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-item {
+      display: flex;
+      flex-direction: column;
+      background: $col-white;
+      padding:60px;
+      border-radius: 8px;
+      transition:all 0.5s ease-in-out;
+      cursor: pointer;
+      &:hover{
+        transform: scale(1.1);
+        transition:all 0.5s ease-in-out;
+      }
+      &.active{
+        background: $col-brand;
+        color:$col-white;
+      }
+      .cost {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 24px;
+        border-bottom:1px solid $col-grey-1;
+        padding-left: 60px;
+        padding-right: 60px;
+        text-align: center;
+        span{
+          &:first-child{
+            font-weight: bold;
+            font-size: 40px;
+          }
+          &:last-child{
+            font-size: 26px;
+          }
+        }
+      }
+      .details{
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        span{
+          flex:1;
+        }
+      }
+    }
+  }
+}
 
 .container-fluid {
   padding-right: 0;
   padding-left: 0;
+}
+
+
+// cta
+
+
+.cta {
+  background: $col-brand;
+  color: $col-white;
+  margin-top: 24px;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid $col-brand;
+
+  &.call {
+    padding: 12px 32px;
+    border-radius: 32px;
+    color: $col-black;
+    background: $col-white;
+  }
 }
