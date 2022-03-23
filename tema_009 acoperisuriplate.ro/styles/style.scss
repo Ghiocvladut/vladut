@@ -1,0 +1,221 @@
+// import
+
+@import url('https://fonts.googleapis.com/css2?family=Livvic:wght@400;500;600;700&display=swap');
+
+// variables
+
+$col-brand: #CF1F29;
+$col-grey-1: #F7F7F7;
+$col-white: #ffffff;
+$col-black: #000000;
+
+// content
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Livvic', sans-serif;
+}
+
+
+.menu {
+  background: $col-grey-1;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .contactdetails {
+      display: flex;
+      align-items: center;
+
+      &-item {
+        display: flex;
+        align-items: center;
+        margin-right: 48px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        i {
+          margin-right: 12px;
+          font-size: 26px;
+          color: $col-brand;
+          cursor: pointer;
+        }
+
+        div {
+          display: flex;
+          flex-direction: column;
+
+          span {
+            &:first-child {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-body {
+    background: rgba($col-brand, 0.85);
+
+    .d-flex {
+      i {
+        margin-right: 24px;
+        color: $col-white;
+        font-size: 14px;
+        cursor: pointer;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .nav-link {
+      color: $col-white !important;
+      margin-right: 24px;
+
+      &.active {
+        opacity: 0.85;
+      }
+    }
+  }
+}
+
+.hero {
+  &-image {
+    z-index: -1;
+
+    img {
+      opacity: 0.85;
+      content: "";
+      width: 100%;
+      height: 1055px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: -1;
+    }
+  }
+
+
+  .hero-body {
+    display: flex;
+    align-items: center;
+    color: $col-white;
+
+    &-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 120px;
+      padding-bottom: 120px;
+
+      &-item {
+        width: 50%;
+
+        &:last-child {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: $col-white;
+          color: $col-black;
+          border-radius: 8px;
+          padding-top: 24px;
+          padding-bottom:48px;
+
+          form {
+            display: flex;
+            flex-direction: column;
+
+            h1 {
+              text-align: center;
+              font-size: 28px;
+            }
+
+            span {
+              margin-bottom: 24px;
+            }
+
+            label {
+              margin-bottom: 12px;
+              font-weight: 500;
+              font-size: 16px;
+              cursor: pointer;
+            }
+
+            input {
+              text-indent: 24px;
+              padding-top: 12px;
+              padding-bottom: 12px;
+              background: $col-grey-1;
+              border: 1px solid $col-grey-1;
+              border-radius: 8px;
+              margin-bottom: 24px;
+            }
+
+            .cta {
+              background: $col-brand;
+              color: $col-white;
+              margin-top: 24px;
+              padding: 20px;
+              border-radius: 8px;
+              border: 1px solid $col-brand;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
+.services {
+  background: $col-grey-1;
+  padding-top: 120px;
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 60px;
+    span {
+      margin-bottom: 12px;
+      color: $col-brand;
+      font-weight: 600;
+    }
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: column;
+    &-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+        &:first-child{
+          margin-bottom: 60px;
+        }
+      .item{
+        border-radius: 8px;
+        background: $col-white;
+        padding: 24px;
+      }
+    }
+  }
+}
+
+
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}

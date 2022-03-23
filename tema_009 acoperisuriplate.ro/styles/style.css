@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Livvic:wght@400;500;600;700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Livvic', sans-serif; }
+
+.menu {
+  background: #F7F7F7; }
+  .menu .logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px; }
+    .menu .logo .contactdetails {
+      display: flex;
+      align-items: center; }
+      .menu .logo .contactdetails-item {
+        display: flex;
+        align-items: center;
+        margin-right: 48px; }
+        .menu .logo .contactdetails-item:last-child {
+          margin-right: 0; }
+        .menu .logo .contactdetails-item i {
+          margin-right: 12px;
+          font-size: 26px;
+          color: #CF1F29;
+          cursor: pointer; }
+        .menu .logo .contactdetails-item div {
+          display: flex;
+          flex-direction: column; }
+          .menu .logo .contactdetails-item div span:first-child {
+            font-weight: bold; }
+  .menu-body {
+    background: rgba(207, 31, 41, 0.85); }
+    .menu-body .d-flex i {
+      margin-right: 24px;
+      color: #ffffff;
+      font-size: 14px;
+      cursor: pointer; }
+      .menu-body .d-flex i:last-child {
+        margin-right: 0; }
+    .menu-body .nav-link {
+      color: #ffffff !important;
+      margin-right: 24px; }
+      .menu-body .nav-link.active {
+        opacity: 0.85; }
+
+.hero-image {
+  z-index: -1; }
+  .hero-image img {
+    opacity: 0.85;
+    content: "";
+    width: 100%;
+    height: 1055px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1; }
+.hero .hero-body {
+  display: flex;
+  align-items: center;
+  color: #ffffff; }
+  .hero .hero-body-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 120px;
+    padding-bottom: 120px; }
+    .hero .hero-body-content-item {
+      width: 50%; }
+      .hero .hero-body-content-item:last-child {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #ffffff;
+        color: #000000;
+        border-radius: 8px;
+        padding-top: 24px;
+        padding-bottom: 48px; }
+        .hero .hero-body-content-item:last-child form {
+          display: flex;
+          flex-direction: column; }
+          .hero .hero-body-content-item:last-child form h1 {
+            text-align: center;
+            font-size: 28px; }
+          .hero .hero-body-content-item:last-child form span {
+            margin-bottom: 24px; }
+          .hero .hero-body-content-item:last-child form label {
+            margin-bottom: 12px;
+            font-weight: 500;
+            font-size: 16px;
+            cursor: pointer; }
+          .hero .hero-body-content-item:last-child form input {
+            text-indent: 24px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            background: #F7F7F7;
+            border: 1px solid #F7F7F7;
+            border-radius: 8px;
+            margin-bottom: 24px; }
+          .hero .hero-body-content-item:last-child form .cta {
+            background: #CF1F29;
+            color: #ffffff;
+            margin-top: 24px;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #CF1F29; }
+
+.services {
+  background: #F7F7F7;
+  padding-top: 120px; }
+  .services .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 60px; }
+    .services .title span {
+      margin-bottom: 12px;
+      color: #CF1F29;
+      font-weight: 600; }
+  .services-body {
+    display: flex;
+    flex-direction: column; }
+    .services-body-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .services-body-content:first-child {
+        margin-bottom: 60px; }
+      .services-body-content .item {
+        border-radius: 8px;
+        background: #ffffff;
+        padding: 24px; }
+
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0; }
+
+/*# sourceMappingURL=style.css.map */
