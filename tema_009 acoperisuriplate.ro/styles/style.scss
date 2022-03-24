@@ -46,12 +46,7 @@ $col-black: #000000;
 
 // content
 
-.pt-120{
-  padding-top: 120px;
-}
-.pb-120{
-  padding-bottom: 120px;
-}
+
 
 body {
   margin: 0;
@@ -150,6 +145,8 @@ body {
 .hero {
   &.despre{
     background: $col-grey-1;
+
+
   }
   &-image {
 
@@ -179,10 +176,18 @@ body {
       &.despre{
         justify-content: space-between;
         color:$col-black;
+        @include for-desktop-up{
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+        }
         img{
             width: 450px;
             height: 450px;
             border-radius: 50%;
+          @include for-desktop-up{
+            margin-bottom:60px;
+          }
           }
         h2{
           margin-bottom: 24px;
@@ -470,11 +475,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include for-desktop-up{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
     &-item{
       display: flex;
       flex-direction: column;
       text-align: center;
       margin-right: 44px;
+      @include for-desktop-up{
+        margin-bottom: 60px;
+        margin-right: 0;
+      }
       &:last-child{
         margin-right: 0;
       }
@@ -508,11 +522,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @include for-desktop-up{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
   &-item{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    @include for-desktop-up{
+      margin-bottom: 60px;
+    }
     img{
       height: 200px;
       width: 200px;
@@ -654,6 +676,9 @@ body {
   @include for-mini-phone-only{
     padding-left: 0;
   }
+  @include for-phone-only{
+    padding-left: 0;
+  }
 }
 
 
@@ -683,4 +708,13 @@ body {
     background: $col-white;
     color: $col-brand;
   }
+}
+
+// padding
+
+.pt-120{
+  padding-top: 120px;
+}
+.pb-120{
+  padding-bottom: 120px;
 }

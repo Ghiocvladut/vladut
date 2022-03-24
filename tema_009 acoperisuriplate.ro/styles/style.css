@@ -1,10 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Livvic:wght@400;500;600;700&display=swap");
-.pt-120 {
-  padding-top: 120px; }
-
-.pb-120 {
-  padding-bottom: 120px; }
-
 body {
   margin: 0;
   padding: 0;
@@ -90,10 +84,18 @@ body {
   .hero .hero-body.despre {
     justify-content: space-between;
     color: #000000; }
+    @media (max-width: 1150px) {
+      .hero .hero-body.despre {
+        display: flex;
+        flex-direction: column;
+        text-align: center; } }
     .hero .hero-body.despre img {
       width: 450px;
       height: 450px;
       border-radius: 50%; }
+      @media (max-width: 1150px) {
+        .hero .hero-body.despre img {
+          margin-bottom: 60px; } }
     .hero .hero-body.despre h2 {
       margin-bottom: 24px; }
     .hero .hero-body.despre p {
@@ -290,11 +292,20 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between; }
+  @media (max-width: 1150px) {
+    .process-body {
+      display: flex;
+      flex-direction: column;
+      text-align: center; } }
   .process-body-item {
     display: flex;
     flex-direction: column;
     text-align: center;
     margin-right: 44px; }
+    @media (max-width: 1150px) {
+      .process-body-item {
+        margin-bottom: 60px;
+        margin-right: 0; } }
     .process-body-item:last-child {
       margin-right: 0; }
     .process-body-item span:first-child {
@@ -319,11 +330,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between; }
+    @media (max-width: 1150px) {
+      .team-body {
+        display: flex;
+        flex-direction: column;
+        text-align: center; } }
     .team-body-item {
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column; }
+      @media (max-width: 1150px) {
+        .team-body-item {
+          margin-bottom: 60px; } }
       .team-body-item img {
         height: 200px;
         width: 200px;
@@ -422,6 +441,9 @@ body {
   @media (max-width: 475px) {
     .container-fluid {
       padding-left: 0; } }
+  @media (max-width: 525px) {
+    .container-fluid {
+      padding-left: 0; } }
 
 .cta {
   background: #CF1F29;
@@ -441,5 +463,11 @@ body {
   .cta.active {
     background: #ffffff;
     color: #CF1F29; }
+
+.pt-120 {
+  padding-top: 120px; }
+
+.pb-120 {
+  padding-bottom: 120px; }
 
 /*# sourceMappingURL=style.css.map */
