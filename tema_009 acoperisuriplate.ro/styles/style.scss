@@ -46,6 +46,12 @@ $col-black: #000000;
 
 // content
 
+.pt-120{
+  padding-top: 120px;
+}
+.pb-120{
+  padding-bottom: 120px;
+}
 
 body {
   margin: 0;
@@ -142,6 +148,9 @@ body {
 }
 
 .hero {
+  &.despre{
+    background: $col-grey-1;
+  }
   &-image {
 
 
@@ -167,20 +176,32 @@ body {
     display: flex;
     align-items: center;
     color: $col-white;
-
+      &.despre{
+        justify-content: space-between;
+        color:$col-black;
+        img{
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;
+          }
+        h2{
+          margin-bottom: 24px;
+        }
+        p{
+          margin-top: 24px;
+          margin-bottom: 24px;
+        }
+      }
     &-content {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-top: 120px;
-      padding-bottom: 120px;
       @include for-tablet-portrait-up {
         flex-direction: column;
       }
 
       &-item {
         width: 50%;
-
         &:first-child {
           @include for-tablet-portrait-up {
             text-align: center;
@@ -246,8 +267,6 @@ body {
 
 .services {
   background: $col-grey-1;
-  padding-top: 120px;
-  padding-bottom: 120px;
 
   .title {
     display: flex;
@@ -296,8 +315,6 @@ body {
 }
 
 .call {
-  padding-top: 120px;
-  padding-bottom: 120px;
   background: rgba($col-brand, 0.90);
 
   &-body {
@@ -319,10 +336,10 @@ body {
 }
 
 .plan {
-  padding-top: 120px;
-  padding-bottom: 120px;
   background: $col-grey-1;
-
+@include for-mini-phone-only{
+  padding-left: 30px;
+}
   &-body {
     &-content {
       display: flex;
@@ -353,8 +370,6 @@ body {
 }
 
 .price {
-  padding-top: 60px;
-  padding-bottom: 120px;
 
   .title {
     display: flex;
@@ -436,9 +451,95 @@ body {
   }
 }
 
+.process{
+
+  .title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 90px;
+    span{
+      margin-bottom: 12px;
+      color:$col-brand;
+      font-weight: 600;
+    }
+  }
+  &-body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-item{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin-right: 44px;
+      &:last-child{
+        margin-right: 0;
+      }
+      span{
+        &:first-child{
+          margin-bottom: 16px;
+          font-weight: 600;
+          font-size:24px;
+        }
+      }
+    }
+  }
+}
+
+.team{
+  background: $col-grey-1;
+  .title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 90px;
+    span{
+      margin-bottom: 12px;
+      color:$col-brand;
+      font-weight: 600;
+    }
+  }
+&-body{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    img{
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+      margin-bottom: 24px;
+    }
+    span{
+      font-size: 20px;
+    }
+    .social{
+      margin-top: 24px;
+      i{
+        margin-right: 16px;
+        cursor: pointer;
+        color:rgba($col-black,0.75);
+        font-size: 20px;
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+}
+
+
 .footer {
-  padding-top: 120px;
-  padding-bottom: 120px;
   background: $col-grey-1;
 
   &-body {
@@ -540,6 +641,7 @@ body {
 }
 
 
+
 .container-fluid {
   padding-right: 0;
   padding-left: 0;
@@ -571,6 +673,10 @@ body {
     border-radius: 32px;
     color: $col-black;
     background: $col-white;
+    &.despre{
+      color:$col-white;
+      background: $col-brand;
+    }
   }
 
   &.active {
