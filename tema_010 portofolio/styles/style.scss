@@ -79,14 +79,19 @@ body {
   }
 
   .d-flex {
-    i {
-      cursor: pointer;
+    a {
+      text-decoration: none;
       margin-right: 18px;
-      font-size: 32px;
-      color: $col-grey-1;
 
       &:last-child {
         margin-right: 0px;
+      }
+
+      i {
+        cursor: pointer;
+        font-size: 32px;
+        color: $col-grey-1;
+
       }
     }
   }
@@ -247,6 +252,91 @@ body {
   }
 }
 
+.reviews {
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+
+    span {
+      font-weight: 600;
+      font-size: 40px;
+      color: $col-black;
+      @include for-phone-only{
+        text-align: center;
+      }
+      &:first-child {
+        font-family: 'Eczar', serif;
+      }
+
+      &:last-child {
+        font-weight: 500;
+        font-size: 20px;
+        color: $col-brown;
+      }
+    }
+  }
+
+  &-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include for-tablet-landscape-up{
+      flex-direction: column;
+    }
+    .left, .right {
+      font-size: 45px;
+      cursor: pointer;
+    }
+
+    .right {
+      transform: rotate(180deg);
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      padding: 64px;
+
+      .details {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        span {
+          font-weight: 700;
+          font-size: 20px;
+          &:first-child {
+            margin-bottom: 18px;
+            font-weight: 400;
+            font-size: 16px;
+          }
+
+        }
+
+        .social {
+          margin-top: 18px;
+
+          a {
+            text-decoration: none;
+            color: $col-black;
+
+            i {
+              font-size: 26px;
+              margin-right: 24px;
+
+              &:last-child {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 // button
 
@@ -282,10 +372,10 @@ body {
   &.white {
     border: 4px solid $col-white;
     color: $col-white;
-    @include for-tablet-portrait-up{
+    @include for-tablet-portrait-up {
       margin-left: 0;
     }
-    @include for-desktop-up{
+    @include for-desktop-up {
       margin-left: 0;
     }
   }

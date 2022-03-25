@@ -19,13 +19,15 @@ body {
       margin-right: 0; }
   .menu .nav-link {
     color: #1B1A19 !important; }
-  .menu .d-flex i {
-    cursor: pointer;
-    margin-right: 18px;
-    font-size: 32px;
-    color: #4D5566; }
-    .menu .d-flex i:last-child {
+  .menu .d-flex a {
+    text-decoration: none;
+    margin-right: 18px; }
+    .menu .d-flex a:last-child {
       margin-right: 0px; }
+    .menu .d-flex a i {
+      cursor: pointer;
+      font-size: 32px;
+      color: #4D5566; }
 
 .hero-body {
   display: flex;
@@ -140,6 +142,63 @@ body {
         @media (max-width: 650px) {
           .work-body-item .image img {
             width: 400px; } }
+
+.reviews .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px; }
+  .reviews .title span {
+    font-weight: 600;
+    font-size: 40px;
+    color: #000000; }
+    @media (max-width: 599px) {
+      .reviews .title span {
+        text-align: center; } }
+    .reviews .title span:first-child {
+      font-family: 'Eczar', serif; }
+    .reviews .title span:last-child {
+      font-weight: 500;
+      font-size: 20px;
+      color: #594F43; }
+.reviews-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  @media (max-width: 670px) {
+    .reviews-body {
+      flex-direction: column; } }
+  .reviews-body .left, .reviews-body .right {
+    font-size: 45px;
+    cursor: pointer; }
+  .reviews-body .right {
+    transform: rotate(180deg); }
+  .reviews-body-item {
+    display: flex;
+    align-items: center;
+    padding: 64px; }
+    .reviews-body-item .details {
+      display: flex;
+      flex-direction: column;
+      text-align: center; }
+      .reviews-body-item .details span {
+        font-weight: 700;
+        font-size: 20px; }
+        .reviews-body-item .details span:first-child {
+          margin-bottom: 18px;
+          font-weight: 400;
+          font-size: 16px; }
+      .reviews-body-item .details .social {
+        margin-top: 18px; }
+        .reviews-body-item .details .social a {
+          text-decoration: none;
+          color: #000000; }
+          .reviews-body-item .details .social a i {
+            font-size: 26px;
+            margin-right: 24px; }
+            .reviews-body-item .details .social a i:last-child {
+              margin-right: 0; }
 
 .cta {
   background: #000000;
