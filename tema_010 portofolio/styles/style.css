@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Eczar:wght@600&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Work Sans', sans-serif; }
+
+.menu {
+  padding: 26px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5); }
+  .menu .logo {
+    margin-right: 24px;
+    cursor: pointer; }
+  .menu .nav-item {
+    font-weight: 600;
+    font-size: 20px;
+    margin-right: 32px; }
+    .menu .nav-item:last-child {
+      margin-right: 0; }
+  .menu .nav-link {
+    color: #1B1A19 !important; }
+  .menu .d-flex i {
+    cursor: pointer;
+    margin-right: 18px;
+    font-size: 32px;
+    color: #4D5566; }
+    .menu .d-flex i:last-child {
+      margin-right: 0px; }
+
+.hero-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  @media (max-width: 1400px) {
+    .hero-body {
+      flex-direction: column; } }
+  .hero-body-item {
+    display: flex;
+    flex-direction: column; }
+    @media (max-width: 1400px) {
+      .hero-body-item:first-child {
+        margin-bottom: 60px;
+        align-items: center;
+        justify-content: center;
+        text-align: center; } }
+    .hero-body-item span {
+      font-weight: 600;
+      font-size: 64px;
+      letter-spacing: 0.02em;
+      color: #000000;
+      font-family: 'Eczar', serif;
+      margin-bottom: 40px; }
+    .hero-body-item img {
+      width: 650px;
+      height: 540px; }
+      @media (max-width: 670px) {
+        .hero-body-item img {
+          width: 450px;
+          height: 250px; } }
+    .hero-body-item .profile {
+      display: flex;
+      align-items: center; }
+
+.cta {
+  background: #000000;
+  color: #ffffff;
+  padding: 14px 24px;
+  font-weight: 600;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 1px solid #000000; }
+  .cta.all {
+    background: #090909;
+    font-size: 24px;
+    padding: 4px 16px;
+    border: 1px solid #090909;
+    margin-bottom: 24px;
+    width: fit-content; }
+  .cta.transparent {
+    background: #ffffff;
+    color: #4D5566;
+    margin-left: 24px;
+    text-align: center;
+    padding: 10px 56px;
+    border-radius: 6px;
+    border: 4px solid #000000; }
+
+.pt-60 {
+  padding-top: 60px; }
+
+.pb-60 {
+  padding-bottom: 60px; }
+
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0; }
+
+/*# sourceMappingURL=style.css.map */
