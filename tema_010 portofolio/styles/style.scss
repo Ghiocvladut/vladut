@@ -4,6 +4,7 @@ $col-black-2: #1B1A19;
 $col-black-3: #090909;
 $col-white: #ffffff;
 $col-grey-1: #4D5566;
+$col-grey-2: #C4C4C4;
 $col-brown: #594F43;
 
 // fonts
@@ -134,7 +135,7 @@ body {
         width: 650px;
         height: 540px;
         @include for-tablet-landscape-up {
-          width: 450px;
+          width: 485px;
           height: 250px;
         }
       }
@@ -204,12 +205,18 @@ body {
           align-items: center;
           justify-content: center;
           text-align: center;
+          padding:20px;
         }
         @include for-tablet-portrait-up {
           width: 400px;
         }
 
         span {
+          @include for-tablet-portrait-up{
+            br{
+              display: none;
+            }
+          }
           &:first-child {
             font-weight: 600;
             font-size: 26px;
@@ -264,9 +271,10 @@ body {
       font-weight: 600;
       font-size: 40px;
       color: $col-black;
-      @include for-phone-only{
+      @include for-phone-only {
         text-align: center;
       }
+
       &:first-child {
         font-family: 'Eczar', serif;
       }
@@ -283,9 +291,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @include for-tablet-landscape-up{
+    @include for-tablet-landscape-up {
       flex-direction: column;
     }
+
     .left, .right {
       font-size: 45px;
       cursor: pointer;
@@ -304,14 +313,16 @@ body {
         display: flex;
         flex-direction: column;
         text-align: center;
-      @include for-desktop-up{
-        br {
-          display: none;
+        @include for-desktop-up {
+          br {
+            display: none;
+          }
         }
-      }
+
         span {
           font-weight: 700;
           font-size: 20px;
+
           &:first-child {
             margin-bottom: 18px;
             font-weight: 400;
@@ -342,43 +353,48 @@ body {
   }
 }
 
-.about{
+.about {
   background: $col-black;
-  &-body{
+
+  &-body {
     display: flex;
     align-items: center;
-    color:$col-white;
-    @include for-small-desktop-up{
+    color: $col-white;
+    @include for-small-desktop-up {
       flex-direction: column;
     }
-    &-item{
+
+    &-item {
       display: flex;
       flex-direction: column;
       width: 50%;
-      @include for-small-desktop-up{
+      @include for-small-desktop-up {
         display: flex;
         align-items: center;
         justify-content: center;
-        &:first-child{
+        &:first-child {
           margin-bottom: 40px;
         }
       }
-      img{
+
+      img {
         width: 648px;
         height: 100%;
-        @include for-tablet-landscape-up{
+        @include for-tablet-landscape-up {
           width: 500px;
         }
-        @include for-phone-only{
+        @include for-phone-only {
           width: 400px;
         }
       }
-      span{
-        @include for-small-desktop-up{
+
+      span {
+        @include for-small-desktop-up {
           text-align: center;
 
         }
-        &:first-child{
+
+        &:first-child {
           font-family: 'Eczar', serif;
           font-weight: 600;
           font-size: 40px;
@@ -387,7 +403,8 @@ body {
         }
 
       }
-      button{
+
+      button {
         margin-top: 40px;
         width: fit-content;
         margin-bottom: 40px;
@@ -396,19 +413,94 @@ body {
   }
 }
 
-.footer{
-  background: $col-black;
-  span{
+.collaborate {
+  &-body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color:$col-white;
-    font-weight: 500;
-    font-size: 20px;
+    flex-direction: column;
+    color: $col-black;
+
+    form {
+      @include for-desktop-up {
+        text-align: center;
+      }
+
+      span {
+        font-weight: 600;
+        font-size: 64px;
+        font-family: 'Eczar', serif;
+        margin-bottom: 40px;
+        color: $col-black;
+
+      }
+
+      .name {
+        display: flex;
+        align-items: center;
+        margin-bottom: 34px;
+    @include for-tablet-landscape-up{
+      margin-top: 40px;
+    }
+        input {
+          width: 50%;
+          margin-right: 24px;
+
+          &:last-child {
+            margin-right: 0px;
+          }
+        }
+
+        ::placeholder {
+          color: $col-black;
+        }
+
+      }
+
+      textarea, input {
+        width: 100%;
+        border: 1px solid rgba($col-grey-2, 0.3);
+        background: rgba($col-grey-2, 0.3);
+        border-radius: 24px;
+        text-indent: 20px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        font-weight: 600;
+        font-size: 20px;
+        resize: none;
+      }
+
+      textarea {
+        height: 200px;
+        margin-bottom: 40px;
+      }
+
+      .message {
+        color: $col-black;
+      @include for-desktop-up{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      }
+    }
   }
 }
 
 
+.footer {
+  background: $col-black;
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $col-white;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+  }
+}
 
 
 // button
@@ -439,9 +531,9 @@ body {
     padding: 10px 56px;
     border-radius: 6px;
     border: 4px solid $col-black;
-
   }
-  &.ml-0{
+
+  &.ml-0 {
     margin-left: 0;
   }
 
