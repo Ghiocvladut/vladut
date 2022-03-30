@@ -1,0 +1,670 @@
+// variables
+$col-blue-1: #4062FF;
+$col-blue-2: #F2F8FF;
+$col-blue-3: #FBFDFF;
+$col-blue-4: #40BAFF;
+$col-blue-5: #4081FF;
+$col-white: #FFFFFF;
+$col-black: #000000;
+$col-green: #54D62C;
+$col-red: #FF4842;
+$col-grey-1: #F9FAFB;
+$col-grey-2: #F4F6F8;
+$col-grey-3: #DFE3E8;
+$col-grey-4: #C4CDD5;
+$col-grey-5: #919EAB;
+$col-grey-6: #637381;
+$col-grey-7: #454F5B;
+$col-grey-8: #212B36;
+$col-grey-9: #161C24;
+$col-grey-10: #B8BED9;
+$col-orange: #EF8E19;
+$col-purple: #636890;
+$col-yellow: #F0B90B;
+
+
+// imports
+
+
+@import url('http://fonts.cdnfonts.com/css/nexa-bold');
+
+
+// imports
+
+
+@mixin for-phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-portrait-up {
+  @media (max-width: 680px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-landscape-up {
+  @media (max-width: 868px) {
+    @content;
+  }
+}
+
+@mixin for-desktop-up {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin for-big-desktop-up {
+  @media (max-width: 1640px) {
+    @content;
+  }
+}
+
+
+// content
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nexa', sans-serif;
+  overflow: hidden;
+}
+
+
+.dashboard {
+  display: flex;
+
+  .menu {
+    background: $col-blue-2;
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    .logo {
+      padding: 40px;
+      cursor: pointer;
+    }
+
+    &-category {
+      height: 100vh;
+      padding: 40px;
+      overflow: auto;
+      &-item {
+        color: $col-grey-10;
+        border-radius: 16px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+
+        &.active {
+          background: $col-blue-1;
+          color: $col-white;
+
+          &:before {
+            content: "";
+            display: block;
+            width: 12px;
+            height: 58px;
+            border-radius: 0px 16px 16px 0px;
+            left: 0px;
+            position: absolute;
+            background: $col-blue-1;
+          }
+        }
+
+        &:hover {
+          background: $col-blue-1;
+          color: $col-white;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &-content {
+          padding: 16px 24px;
+          display: flex;
+          align-items: center;
+
+          i {
+            font-size: 24px;
+            margin-right: 16px;
+          }
+
+          span {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 16px;
+          }
+        }
+      }
+
+      &-footer {
+        margin-top: 160px;
+        padding: 16px 24px;
+        color: $col-red;
+        display: flex;
+        align-items: center;
+
+        i {
+          margin-right: 16px;
+          font-size: 24px;
+          cursor: pointer;
+        }
+
+        span {
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 16px;
+          cursor: pointer;
+        }
+      }
+
+    }
+
+  }
+
+  &-content {
+    display: flex;
+    flex: 1;
+    background: $col-blue-2;
+    @include for-big-desktop-up {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: auto;
+    }
+
+    &-item {
+      &:first-child {
+        width: 75%;
+        margin-right: 24px;
+        background: $col-blue-3;
+        @include for-big-desktop-up {
+          width: 100%;
+        }
+      }
+
+      &:last-child {
+        width: 25%;
+        background: $col-white;
+        @include for-big-desktop-up {
+          width: 100%;
+        }
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 40px 28px;
+
+        label {
+          position: absolute;
+          padding: 0px 16px;
+          top: 48px;
+
+          i {
+            font-size: 20px;
+            color: $col-grey-5;
+            line-height: 40px;
+          }
+        }
+
+        input {
+          border-radius: 10px;
+          text-indent: 55px;
+          padding: 16px 0;
+          border: 1px solid $col-white;
+          padding-right: 60px;
+        }
+
+        ::placeholder {
+          color: $col-grey-4;
+          font-size: 14px;
+        }
+      }
+
+      .overflow {
+        overflow: auto;
+        height: 100vh;
+
+        .hero {
+          padding: 0px 28px;
+          margin-bottom: 60px;
+
+          &-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: $col-blue-1;
+            border-radius: 16px;
+            @include for-tablet-landscape-up {
+              flex-direction: column;
+
+            }
+
+            &-item {
+              display: flex;
+              flex-direction: column;
+              @include for-tablet-landscape-up {
+                align-items: center;
+                justify-content: center;
+              }
+
+              &:first-child {
+                padding: 40px;
+              }
+
+              span {
+                font-weight: 800;
+                font-size: 36px;
+                line-height: 43px;
+                color: $col-white;
+                margin-bottom: 16px;
+                @include for-tablet-landscape-up {
+                  text-align: center;
+                }
+              }
+
+              img {
+                position: relative;
+                top: 48px;
+                @include for-tablet-landscape-up {
+                  top: 0px;
+                }
+              }
+            }
+
+          }
+        }
+
+        .portfolio {
+          padding: 0 28px;
+          margin-bottom: 30px;
+
+          &-title {
+            font-weight: 800;
+            font-size: 24px;
+            line-height: 29px;
+            margin-bottom: 16px;
+            @include for-desktop-up {
+              text-align: center;
+            }
+          }
+
+          &-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include for-desktop-up {
+              display: flex;
+              flex-direction: column;
+            }
+
+            &-item {
+              display: flex;
+              align-items: center;
+              background: $col-white;
+              box-shadow: 0px 0px 25px rgba(48, 73, 191, 0.07);
+              border-radius: 16px;
+              padding: 16px;
+              @include for-desktop-up {
+                margin-bottom: 24px;
+                &:last-child {
+                  margin-bottom: 0;
+                }
+              }
+              @include for-tablet-portrait-up {
+                flex-direction: column;
+                justify-content: center;
+              }
+
+              .coin {
+                margin-right: 28px;
+                @include for-tablet-portrait-up {
+                  margin-right: 0;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  flex-direction: column;
+                }
+
+                &-item {
+                  margin-bottom: 4px;
+
+                  &:last-child {
+                    margin-bottom: 0;
+                  }
+
+                  span {
+                    display: flex;
+                    align-items: center;
+                    font-weight: 800;
+                    font-size: 18px;
+                  }
+
+                  p {
+                    color: $col-grey-5;
+                    margin: 0;
+                  }
+
+                  .bitcoin {
+                    font-size: 13px;
+                    color: $col-grey-5;
+                  }
+                }
+
+              }
+
+              .profit {
+                text-align: right;
+                @include for-tablet-portrait-up {
+                  text-align: center;
+                  margin-top: 24px;
+                }
+
+                span {
+                  font-weight: bold;
+                  font-size: 18px;
+                  line-height: 22px;
+                }
+
+                &-item {
+                  &.etherum {
+                    color: $col-green;
+                  }
+
+                  i {
+                    font-size: 16px;
+                  }
+
+                  margin-top: 4px;
+                  color: $col-red;
+
+                  span {
+
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .chart {
+          padding: 28px;
+
+        }
+      }
+
+      .user {
+        display: flex;
+        align-items: center;
+        padding: 40px 28px;
+        margin-bottom: 44px;
+
+        &-item {
+          display: flex;
+          align-items: center;
+          position: relative;
+
+          &:first-child {
+            flex: 1;
+          }
+
+          i {
+            cursor: pointer;
+
+            &:first-child {
+              font-size: 32px;
+              color: $col-grey-6;
+
+              &:after {
+                position: absolute;
+                content: "";
+                width: 10px;
+                height: 10px;
+                background: $col-red;
+                border-radius: 50%;
+                top: 5px;
+                left: 28px;
+              }
+            }
+          }
+
+          img {
+            margin-right: 16px;
+          }
+
+          span {
+            font-weight: 800;
+            font-size: 16px;
+            line-height: 19px;
+            margin-right: 8px;
+          }
+
+        }
+      }
+
+      .transaction {
+        padding: 0 32px;
+
+        &-title {
+          font-weight: 800;
+          font-size: 24px;
+          line-height: 29px;
+          margin-bottom: 16px;
+          @include for-tablet-portrait-up {
+            text-align: center;
+          }
+        }
+
+        &-content {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 60px 0;
+          background: $col-blue-1;
+          color: $col-white;
+          border-radius: 16px;
+          margin-bottom: 14px;
+
+          .money {
+            display: flex;
+            flex-direction: column;
+
+            span {
+              &:first-child {
+                margin-bottom: 8px;
+                font-weight: 800;
+                font-size: 24px;
+                line-height: 29px;
+              }
+            }
+
+            &-item {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: $col-blue-5;
+              border-radius: 16px;
+              padding: 8px 0;
+            }
+          }
+        }
+
+        &-method {
+          display: flex;
+          align-items: center;
+          margin-bottom: 60px;
+          @include for-tablet-portrait-up {
+            flex-direction: column;
+          }
+
+          button {
+            width: 50%;
+            display: flex;
+            align-items: center;
+
+            &:first-child {
+              margin-right: 16px;
+              @include for-tablet-portrait-up {
+                margin-right: 0;
+                margin-bottom: 24px;
+              }
+            }
+
+            i {
+              font-size: 24px;
+            }
+          }
+        }
+      }
+
+      .activity {
+        padding: 0 32px;
+
+        &-title {
+          font-weight: 800;
+          font-size: 24px;
+          line-height: 29px;
+          margin-bottom: 26px;
+          @include for-tablet-portrait-up {
+            text-align: center;
+          }
+        }
+
+        &-content {
+          &-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+
+            .details {
+              display: flex;
+              flex-direction: column;
+              flex: 1;
+
+              span {
+                &:first-child {
+                  font-weight: 800;
+                  font-size: 14px;
+                  line-height: 17px;
+                }
+
+                &:last-child {
+                  font-size: 12px;
+                  line-height: 14px;
+                  color: $col-grey-5;
+                }
+              }
+            }
+
+            span {
+              font-weight: 800;
+              font-size: 14px;
+              line-height: 17px;
+
+              &.red {
+                color: $col-red;
+              }
+
+              &.green {
+                color: $col-green;
+              }
+            }
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// icons
+i {
+  &.coin {
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $col-orange;
+    border-radius: 16px;
+    color: $col-white;
+    margin-right: 12px;
+    @include for-tablet-portrait-up {
+      margin-bottom: 24px;
+    }
+  }
+
+  &.etherum {
+    background: $col-purple;
+  }
+
+  &.binance {
+    background: $col-yellow;
+  }
+}
+
+// button
+
+
+.cta {
+  background: $col-blue-4;
+  border: 1px solid $col-blue-4;
+  padding: 16px 24px;
+  width: fit-content;
+  border-radius: 16px;
+  color: $col-white;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  cursor: pointer;
+
+  &.deposit {
+    background: $col-blue-1;
+    border: 1px solid $col-blue-1;
+  }
+
+  &.method {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 8px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $col-grey-3;
+  border-radius: 8px;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $col-blue-1;
+  border-radius: 8px;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $col-blue-1;
+  border-radius: 8px;
+
+}

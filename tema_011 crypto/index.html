@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="http://fonts.cdnfonts.com/css/nexa-bold" rel="stylesheet">
+    <link rel="stylesheet" href="fontello/css/fontello.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="scripts/script.js"></script>
+</head>
+<body>
+<div class="dashboard">
+    <div class="menu">
+        <div class="logo">
+            <img src="images/Logo.png" alt="">
+        </div>
+        <div class="menu-category">
+            <div class=""></div>
+            <div class="menu-category-item active">
+                <div class="menu-category-item-content">
+                    <i class="demo-icon icon-home"></i>
+                    <span>Dashboard</span>
+                </div>
+            </div>
+            <div class="menu-category-item">
+                <div class="menu-category-item-content">
+                    <i class="demo-icon icon-swap"></i>
+                    <span>Exchange</span>
+                </div>
+            </div>
+            <div class="menu-category-item">
+                <div class="menu-category-item-content">
+                    <i class="demo-icon icon-wallet"></i>
+                    <span>Wallet</span>
+                </div>
+            </div>
+            <div class="menu-category-item">
+                <div class="menu-category-item-content">
+                    <i class="demo-icon icon-activity"></i>
+                    <span>Statistics</span>
+                </div>
+            </div>
+            <div class="menu-category-item">
+                <div class="menu-category-item-content">
+                    <i class="demo-icon icon-profile"></i>
+                    <span>Profile</span>
+                </div>
+            </div>
+            <div class="menu-category-item">
+                <div class="menu-category-item-content">
+                    <i class="demo-icon icon-setting"></i>
+                    <span>Settings</span>
+                </div>
+            </div>
+            <div class="menu-category-footer">
+                <i class="demo-icon icon-logout"></i>
+                <span>Logout</span>
+            </div>
+
+        </div>
+    </div>
+    <div class="dashboard-content">
+        <div class="dashboard-content-item">
+            <div class="header">
+                <label for="search">
+                    <i class="demo-icon icon-search"></i>
+                </label>
+                <input type="text" placeholder="Search anything" id="search">
+            </div>
+            <div class="overflow">
+                <div class="hero">
+                    <div class="hero-content">
+                        <div class="hero-content-item">
+                            <span>Assign expert to <br> Manage Portfolio</span>
+                            <button class="cta">Find expert</button>
+                        </div>
+                        <div class="hero-content-item">
+                            <img src="images/owner.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio">
+                    <div class="portfolio-title">My Portfolio</div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-content-item">
+                            <i class="demo-icon icon-bi_currency-bitcoin coin"></i>
+                            <div class="coin">
+                                <div class="coin-item">
+                                    <span>BTC <p>/USDT</p></span>
+
+                                </div>
+                                <div class="coin-item">
+                                    <span class="bitcoin">Bitcoin</span>
+                                </div>
+                            </div>
+                            <div class="profit">
+                                <span>$135,25</span>
+                                <div class="profit-item">
+                                    <i class="demo-icon icon-arrow---down-2"></i>
+                                    <span>$32 (2%)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content-item">
+                            <i class="demo-icon icon-ph_currency-eth coin etherum"></i>
+                            <div class="coin">
+                                <div class="coin-item">
+                                    <span>ETH <p>/USDT</p></span>
+
+                                </div>
+                                <div class="coin-item">
+                                    <span class="bitcoin">Etherum</span>
+                                </div>
+                            </div>
+                            <div class="profit">
+                                <span>$215,00</span>
+                                <div class="profit-item etherum">
+                                    <i class="demo-icon icon-arrow---up-2"></i>
+                                    <span>$32 (2%)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content-item">
+                            <i class="demo-icon icon-simple-icons_binance coin binance"></i>
+                            <div class="coin">
+                                <div class="coin-item">
+                                    <span>BNB <p>/USDT</p></span>
+
+                                </div>
+                                <div class="coin-item">
+                                    <span class="bitcoin">Binance</span>
+                                </div>
+                            </div>
+                            <div class="profit">
+                                <span>$170,50</span>
+                                <div class="profit-item">
+                                    <i class="demo-icon icon-arrow---down-2"></i>
+                                    <span>$32 (2%)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart">
+                    <div id="curve_chart" style="width:100%; height: 500px"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="dashboard-content-item">
+            <div class="user">
+                <div class="user-item">
+                    <i class="demo-icon icon-notification"></i>
+                </div>
+                <div class="user-item">
+                    <img src="images/user.png" alt="">
+                    <span>Timothy</span>
+                    <i class="demo-icon icon-arrow---down-2"></i>
+                </div>
+            </div>
+            <div class="transaction">
+                <div class="transaction-title">
+                    Accounts
+                </div>
+                <div class="transaction-content">
+                    <div class="money">
+                        <span>$1,445,000</span>
+                        <div class="money-item">
+                            <i class="demo-icon icon-arrow---up-2"></i>
+                            <span>$32 (2%)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="transaction-method">
+                    <button class="cta method deposit">
+                        <i class="demo-icon icon-arrow---down"></i>
+                        Deposit
+                    </button>
+                    <button class="cta method">
+                        <i class="demo-icon icon-arrow---up"></i>
+                        Withdraw
+                    </button>
+                </div>
+            </div>
+            <div class="activity">
+                <div class="activity-title">
+                    Recent Transactions
+                </div>
+                <div class="activity-content">
+                    <div class="activity-content-item">
+                        <i class="demo-icon icon-bi_currency-bitcoin coin binance"></i>
+                        <div class="details">
+                            <span>Bitcoin Buy</span>
+                            <span>Today</span>
+                        </div>
+                        <span class="green">+2.05 BTC</span>
+                    </div>
+                    <div class="activity-content-item">
+                        <i class="demo-icon icon-ph_currency-eth coin etherum"></i>
+                        <div class="details">
+                            <span>Bitcoin Buy</span>
+                            <span>Today</span>
+                        </div>
+                        <span class="red">+3.05 ETH</span>
+                    </div>
+                    <div class="activity-content-item">
+                        <i class="demo-icon icon-ph_currency-eth coin etherum"></i>
+                        <div class="details">
+                            <span>Bitcoin Buy</span>
+                            <span>Today</span>
+                        </div>
+                        <span class="red">+1.05 ETH</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+</body>
+</html>
