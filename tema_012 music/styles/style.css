@@ -2,20 +2,27 @@
 body {
   margin: 0;
   padding: 0;
+  background: #FAFAFA;
   @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap"); }
 
 .menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #FAFAFA;
   padding: 20px 60px; }
+  @media (max-width: 1060px) {
+    .menu {
+      display: flex;
+      flex-direction: column; } }
   .menu ul {
     margin: 0;
     padding: 0;
     list-style: none;
     display: flex;
     align-items: center; }
+    @media (max-width: 1060px) {
+      .menu ul {
+        margin-bottom: 40px; } }
     .menu ul li {
       margin-right: 50px;
       font-size: 24px;
@@ -41,6 +48,9 @@ body {
   .menu .login {
     display: flex;
     align-items: center; }
+    @media (max-width: 1060px) {
+      .menu .login {
+        margin-top: 40px; } }
   .menu label {
     position: relative;
     display: inline-block;
@@ -93,15 +103,25 @@ body {
         display: none; }
 
 .hero {
-  background: #FAFAFA;
   padding: 0px 90px; }
   .hero-content {
     display: flex;
     align-items: center;
     justify-content: space-between; }
+    @media (max-width: 1600px) {
+      .hero-content {
+        display: flex;
+        flex-direction: column;
+        padding-top: 40px; } }
     .hero-content .item {
       display: flex;
       flex-direction: column; }
+      @media (max-width: 1600px) {
+        .hero-content .item:first-child {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column; } }
       .hero-content .item span {
         font-weight: 700;
         font-size: 55px;
@@ -114,14 +134,200 @@ body {
         letter-spacing: 0.02em;
         color: #282828;
         margin-bottom: 60px; }
-      .hero-content .item img {
-        height: 750px; }
+        @media (max-width: 1060px) {
+          .hero-content .item .lorem {
+            text-align: center; } }
+      @media (max-width: 862px) {
+        .hero-content .item img {
+          display: none; } }
       .hero-content .item .actions {
         display: flex;
         align-items: center; }
         .hero-content .item .actions button i {
           font-size: 18px;
           margin-right: 8px; }
+  .hero-prices {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: -170px; }
+    @media (max-width: 862px) {
+      .hero-prices {
+        top: 0px;
+        margin-top: 60px; } }
+    @media (max-width: 800px) {
+      .hero-prices {
+        display: flex;
+        flex-direction: column-reverse; } }
+    .hero-prices .more {
+      display: flex; }
+      @media (max-width: 1060px) {
+        .hero-prices .more {
+          display: none; } }
+      @media (max-width: 800px) {
+        .hero-prices .more {
+          display: block; } }
+      @media (max-width: 1600px) {
+        .hero-prices .more {
+          display: none; } }
+      .hero-prices .more i {
+        border: 1px solid #000000;
+        border-radius: 50%;
+        padding: 18px 24px;
+        font-size: 20px;
+        filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.6)); }
+    .hero-prices-list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      @media (max-width: 800px) {
+        .hero-prices-list {
+          display: flex;
+          flex-direction: column; } }
+      .hero-prices-list .item {
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(116.15deg, rgba(192, 192, 192, 0.63) -10.88%, rgba(255, 255, 255, 0.49) -10.87%, rgba(255, 255, 255, 0.07) 74.79%);
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        box-sizing: border-box;
+        backdrop-filter: blur(30px);
+        border-radius: 25px;
+        padding: 0px 60px 0px 20px;
+        margin-right: 60px; }
+        @media (max-width: 800px) {
+          .hero-prices-list .item {
+            margin-right: 0;
+            margin-bottom: 60px;
+            padding: 0; } }
+        .hero-prices-list .item:last-child {
+          margin-right: 0; }
+        .hero-prices-list .item img {
+          position: relative;
+          top: -116px;
+          left: 25px; }
+          @media (max-width: 862px) {
+            .hero-prices-list .item img {
+              top: 0;
+              left: 0; } }
+        .hero-prices-list .item .details {
+          position: absolute;
+          top: 110px; }
+          @media (max-width: 862px) {
+            .hero-prices-list .item .details {
+              top: 0;
+              position: static;
+              text-align: center; } }
+          .hero-prices-list .item .details-item {
+            font-size: 24px;
+            line-height: 40px; }
+            .hero-prices-list .item .details-item span {
+              color: #FC9918; }
+              .hero-prices-list .item .details-item span:last-child {
+                text-decoration: line-through;
+                font-size: 18px;
+                line-height: 40px;
+                margin-left: 18px;
+                color: #000000; }
+
+.trend {
+  padding: 0px 90px;
+  margin-bottom: 120px; }
+  @media (max-width: 1600px) {
+    .trend {
+      margin-top: 90px; } }
+  .trend-title {
+    text-align: center;
+    margin-bottom: 120px;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 40px; }
+  .trend-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    @media (max-width: 1600px) {
+      .trend-content {
+        flex-direction: column; } }
+    .trend-content-item {
+      display: flex;
+      flex-direction: column; }
+      @media (max-width: 1600px) {
+        .trend-content-item {
+          margin-bottom: 60px; } }
+      .trend-content-item .info {
+        background: #282828;
+        border-radius: 0px 0px 50px 50px; }
+        .trend-content-item .info-content {
+          padding: 20px; }
+          .trend-content-item .info-content span {
+            font-size: 26px;
+            line-height: 36px;
+            color: #ffffff; }
+            .trend-content-item .info-content span.yellow {
+              color: #FC9918; }
+          .trend-content-item .info-content ul {
+            display: flex;
+            flex-direction: column; }
+            .trend-content-item .info-content ul li {
+              color: #ffffff;
+              font-size: 18px;
+              line-height: 36px; }
+          .trend-content-item .info-content .actions {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin-bottom: 20px; }
+            .trend-content-item .info-content .actions button:first-child {
+              margin-right: 20px; }
+            .trend-content-item .info-content .actions button.cart {
+              border-radius: 32px;
+              padding: 14px 16px; }
+              .trend-content-item .info-content .actions button.cart i {
+                margin-right: 10px; }
+            .trend-content-item .info-content .actions button.shop {
+              margin-right: 0;
+              border-radius: 32px;
+              filter: drop-shadow(2px 4px 18px rgba(241, 74, 22, 0.25));
+              padding: 14px 48px; }
+
+.support {
+  padding: 0 90px; }
+  @media (max-width: 599px) {
+    .support {
+      padding: 0 60px; } }
+  .support-content {
+    background: linear-gradient(91.42deg, #370665 0%, #35589A 100%);
+    border-radius: 25px;
+    color: #ffffff; }
+    .support-content-title {
+      font-weight: 700;
+      font-size: 45px;
+      line-height: 55px;
+      text-align: center;
+      padding: 30px 30px 45px 30px; }
+    .support-content-list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0px 60px 30px 60px; }
+      @media (max-width: 1060px) {
+        .support-content-list {
+          display: flex;
+          flex-direction: column; } }
+      .support-content-list .item {
+        display: flex;
+        align-items: center; }
+        @media (max-width: 1060px) {
+          .support-content-list .item {
+            margin-bottom: 24px; } }
+        .support-content-list .item i {
+          font-size: 30px;
+          margin-right: 24px; }
+        .support-content-list .item span {
+          font-size: 36px;
+          line-height: 44px; }
 
 .cta {
   background: transparent;
