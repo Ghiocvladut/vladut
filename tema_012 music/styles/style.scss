@@ -10,6 +10,7 @@ $col-orange: #F14A16;
 $col-yellow: #FC9918;
 $col-yellow-2: #F9FE1F;
 $col-purple: #370665;
+$col-blue-1: #35589A;
 
 // imports
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap');
@@ -18,7 +19,7 @@ $col-purple: #370665;
 
 
 @mixin for-small-phone-only {
-  @media (max-width:470px) {
+  @media (max-width: 470px) {
     @content;
   }
 }
@@ -28,6 +29,7 @@ $col-purple: #370665;
     @content;
   }
 }
+
 @mixin for-max-phone {
   @media (max-width: 679px) {
     @content;
@@ -88,6 +90,9 @@ body {
     @include for-desktop-up {
       margin-bottom: 40px;
     }
+    @include for-small-phone-only {
+      flex-direction: column;
+    }
 
     li {
       margin-right: 50px;
@@ -96,6 +101,10 @@ body {
       letter-spacing: 0.04em;
       position: relative;
       cursor: pointer;
+      @include for-small-phone-only {
+        margin-right: 0;
+        margin-bottom: 24px;
+      }
 
       &.active {
         &:after {
@@ -206,9 +215,10 @@ body {
 
 .hero {
   padding: 0px 90px;
-@include for-big-desktop-up{
-  padding: 0;
-}
+  @include for-big-desktop-up {
+    padding: 0;
+  }
+
   &-content {
     display: flex;
     align-items: center;
@@ -262,8 +272,19 @@ body {
       .actions {
         display: flex;
         align-items: center;
+        @include for-small-phone-only {
+          padding: 0 14px;
+          flex-direction: column;
+        }
 
         button {
+          @include for-small-phone-only {
+            &:first-child {
+              margin-right: 0;
+              margin-bottom: 24px;
+            }
+          }
+
           i {
             font-size: 18px;
             margin-right: 8px;
@@ -321,163 +342,68 @@ body {
         flex-direction: column;
 
       }
-      }
-
-      .item {
-        display: flex;
-        flex-direction: column;
-        background: linear-gradient(116.15deg, rgba(192, 192, 192, 0.63) -10.88%, rgba(255, 255, 255, 0.49) -10.87%, rgba(255, 255, 255, 0.07) 74.79%);
-        border: 1px solid rgba(255, 255, 255, 0.7);
-        box-sizing: border-box;
-        backdrop-filter: blur(30px);
-        border-radius: 25px;
-        padding: 0px 60px 0px 20px;
-        margin-right: 120px;
-        @include for-tablet-portrait-up {
-          margin-right: 0;
-          margin-bottom: 60px;
-          padding: 0;
-        }
-        @include for-phone-only {
-          left: -60px;
-          position: relative;
-        }
-        @include for-tablet-landscape-up{
-          position: relative;
-          left: -60px;
-        }
-
-        &:last-child {
-          margin-right: 0;
-        }
-
-        img {
-          position: relative;
-          top: -116px;
-          left: 25px;
-          @include for-tablet-landscape-up {
-            top: 0;
-            left: 0;
-          }
-        }
-
-        .details {
-          position: absolute;
-          top: 110px;
-          @include for-tablet-landscape-up {
-            top: 0;
-            position: static;
-            text-align: center;
-          }
-
-          &-item {
-            font-size: 24px;
-            line-height: 40px;
-
-            span {
-              color: $col-yellow;
-
-              &:last-child {
-                text-decoration: line-through;
-                font-size: 18px;
-                line-height: 40px;
-                margin-left: 18px;
-                color: $col-black;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-
-.trend {
-  padding: 0px 90px;
-  margin-bottom: 120px;
-  @include for-big-desktop-up {
-    margin-top: 90px;
-    padding: 0px 20px;
-  }
-
-  &-title {
-    text-align: center;
-    margin-bottom: 120px;
-    font-weight: 700;
-    font-size: 64px;
-  }
-
-  &-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    @include for-big-desktop-up {
-      flex-direction: column;
     }
 
-    &-item {
+    .item {
       display: flex;
       flex-direction: column;
-      @include for-big-desktop-up {
+      background: linear-gradient(116.15deg, rgba(192, 192, 192, 0.63) -10.88%, rgba(255, 255, 255, 0.49) -10.87%, rgba(255, 255, 255, 0.07) 74.79%);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      box-sizing: border-box;
+      backdrop-filter: blur(30px);
+      border-radius: 25px;
+      padding: 0px 60px 0px 20px;
+      margin-right: 120px;
+      @include for-tablet-portrait-up {
+        margin-right: 0;
         margin-bottom: 60px;
+        padding: 0;
+      }
+      @include for-phone-only {
+        left: -60px;
+        position: relative;
+      }
+      @include for-tablet-landscape-up {
+        position: relative;
+        left: -60px;
       }
 
-      .info {
-        background: $col-grey-3;
-        border-radius: 0px 0px 50px 50px;
+      &:last-child {
+        margin-right: 0;
+      }
 
-        &-content {
-          padding: 20px;
+      img {
+        position: relative;
+        top: -116px;
+        left: 25px;
+        @include for-tablet-landscape-up {
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .details {
+        position: absolute;
+        top: 110px;
+        @include for-tablet-landscape-up {
+          top: 0;
+          position: static;
+          text-align: center;
+        }
+
+        &-item {
+          font-size: 24px;
+          line-height: 40px;
 
           span {
-            font-size: 26px;
-            line-height: 36px;
-            color: $col-white;
+            color: $col-yellow;
 
-            &.yellow {
-              color: $col-yellow;
-            }
-          }
-
-          ul {
-            display: flex;
-            flex-direction: column;
-
-            li {
-              color: $col-white;
+            &:last-child {
+              text-decoration: line-through;
               font-size: 18px;
-              line-height: 36px;
-            }
-          }
-
-          .actions {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 20px;
-            margin-bottom: 20px;
-
-            button {
-              &:first-child {
-                margin-right: 20px;
-              }
-
-              &.cart {
-                border-radius: 32px;
-                padding: 14px 16px;
-
-                i {
-                  margin-right: 10px;
-                }
-              }
-
-              &.shop {
-                margin-right: 0;
-                border-radius: 32px;
-                filter: drop-shadow(2px 4px 18px rgba(241, 74, 22, 0.25));
-                padding: 14px 48px;
-              }
+              line-height: 40px;
+              margin-left: 18px;
+              color: $col-black;
             }
           }
         }
@@ -491,7 +417,7 @@ body {
   padding: 0 90px;
   margin-bottom: 120px;
   @include for-phone-only {
-    padding: 0 60px;
+    padding: 0px 20px;
   }
 
   &-content {
@@ -516,11 +442,16 @@ body {
       @include for-desktop-up {
         display: flex;
         flex-direction: column;
+        align-items: baseline;
       }
 
       .item {
         display: flex;
         align-items: center;
+        @include for-small-phone-only {
+          flex-direction: column;
+          text-align: center;
+        }
         @include for-desktop-up {
           margin-bottom: 24px;
         }
@@ -528,6 +459,10 @@ body {
         i {
           font-size: 30px;
           margin-right: 24px;
+          @include for-small-phone-only {
+            margin-bottom: 24px;
+            margin-right: 0;
+          }
         }
 
         span {
@@ -542,9 +477,11 @@ body {
 
 .offer {
   padding: 0 90px;
-@include for-tablet-portrait-up{
-  padding: 0;
-}
+  margin-bottom: 140px;
+  @include for-tablet-portrait-up {
+    padding: 0;
+  }
+
   &-content {
     display: flex;
     align-items: center;
@@ -575,11 +512,11 @@ body {
           width: 500px;
           height: 500px;
         }
-        @include for-phone-only{
+        @include for-phone-only {
           width: 380px;
           height: 380px;
         }
-        @include for-small-phone-only{
+        @include for-small-phone-only {
           width: 280px;
           height: 280px;
         }
@@ -600,10 +537,10 @@ body {
         top: 0px;
         left: 42px;
 
-        @include for-phone-only{
+        @include for-phone-only {
           left: 0px;
         }
-        @include for-small-phone-only{
+        @include for-small-phone-only {
           padding: 10px 18px;
         }
       }
@@ -612,7 +549,7 @@ body {
         font-size: 65px;
         line-height: 79px;
         margin-bottom: 110px;
-        @include for-big-desktop-up{
+        @include for-big-desktop-up {
           text-align: center;
         }
       }
@@ -621,7 +558,7 @@ body {
         font-size: 36px;
         line-height: 44px;
         margin-bottom: 28px;
-        @include for-big-desktop-up{
+        @include for-big-desktop-up {
           text-align: center;
         }
       }
@@ -631,10 +568,12 @@ body {
           &:first-child {
             margin-bottom: 20px;
           }
-          @include for-desktop-up{
+
+          @include for-desktop-up {
             display: flex;
             align-items: center;
           }
+
           .duration {
             font-weight: 700;
             font-size: 60px;
@@ -673,6 +612,9 @@ body {
         display: flex;
         align-items: center;
         margin-top: 60px;
+        @include for-small-phone-only {
+          padding: 0 14px;
+        }
 
         button {
           &:first-child {
@@ -687,6 +629,9 @@ body {
 
           &.shop {
             filter: drop-shadow(0px 0px 16px #F14A16);
+            @include for-small-phone-only {
+              margin-right: 0;
+            }
           }
         }
       }
@@ -696,7 +641,299 @@ body {
 }
 
 
+.accessories {
+  padding: 0 90px;
+  margin-bottom: 120px;
+  @include for-desktop-up {
+    padding: 0;
+  }
+
+  &-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 65px;
+    line-height: 79px;
+    margin-bottom: 120px;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      @include for-big-desktop-up {
+        flex-direction: column;
+      }
+      @include for-tablet-portrait-up {
+        padding: 0 20px;
+      }
+
+      img {
+        @include for-big-desktop-up {
+          margin-bottom: 40px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+        @include for-tablet-portrait-up {
+          width: 100%;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.app{
+  padding: 0 90px;
+  margin-bottom: 120px;
+  @include for-big-desktop-up{
+    padding: 0 60px;
+  }
+  @include for-phone-only{
+    padding: 0 20px;
+  }
+  &-content{
+    background: linear-gradient(91.42deg, #370665 0%, #35589A 100%);
+    border-radius: 25px;
+    padding: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include for-big-desktop-up{
+      flex-direction: column;
+    }
+
+    &-item{
+      padding-left: 70px;
+      &:first-child{
+        img{
+          @include for-big-desktop-up{
+            width: 100%;
+          }
+        }
+      }
+      @include for-big-desktop-up{
+        padding-left: 0;
+        text-align: center;
+      }
+      @include for-tablet-portrait-up{
+        width: 100%;
+      }
+      &:last-child{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-right: 150px;
+        padding-left: 0;
+        color:$col-white;
+        @include for-big-desktop-up{
+          padding-right: 0;
+        }
+      }
+      h1{
+        font-size: 56px;
+        line-height: 68px;
+        margin-bottom: 16px;
+      }
+      span{
+        font-size: 32px;
+        line-height: 39px;
+      }
+      div{
+        display: flex;
+        align-items: center;
+        @include for-phone-only{
+          flex-direction: column;
+          margin-top: 40px;
+        }
+        img{
+          &:first-child{
+            margin-right: 22px;
+            @include for-phone-only{
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+// trend section
+
+.trend {
+  padding: 0px 90px;
+  margin-bottom: 120px;
+  @include for-big-desktop-up {
+    margin-top: 90px;
+    padding: 0px 20px;
+  }
+
+  &-title {
+    text-align: center;
+    margin-bottom: 120px;
+    font-weight: 700;
+    font-size: 64px;
+  }
+
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include for-big-desktop-up {
+      flex-direction: column;
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+
+      &.arrivals {
+        border: 4px solid $col-blue-1;
+        border-radius: 56px;
+      }
+
+      img {
+
+        &.arrivals {
+          border-radius: 44px 0px 0px 0px;
+          width: 519px;
+          height: 415px;
+          @include for-small-phone-only {
+            border-radius: 50px 50px 0px 0px;
+          }
+          @include for-phone-only {
+            width: 100%;
+          }
+        }
+
+        &.mini {
+          border-radius: 44px 54px 0px 0px;
+          @include for-small-phone-only {
+            border-radius: 54px 54px 0px 0px;
+          }
+        }
+      }
+
+      @include for-big-desktop-up {
+        margin-bottom: 60px;
+      }
+      @include for-phone-only {
+        width: 100%;
+
+      }
+    }
+
+
+    .info {
+      background: $col-grey-3;
+      border-radius: 0px 0px 50px 50px;
+
+      &.purple {
+        background: $col-purple;
+      }
+
+      &-content {
+        padding: 20px;
+        @include for-phone-only {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+        }
+
+        span {
+          font-size: 26px;
+          line-height: 36px;
+          color: $col-white;
+
+          &.yellow {
+            color: $col-yellow;
+          }
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          @include for-big-desktop-up {
+            text-align: left;
+          }
+
+          li {
+            color: $col-white;
+            font-size: 18px;
+            line-height: 36px;
+          }
+        }
+
+        .actions {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 20px;
+          margin-bottom: 20px;
+          @include for-phone-only {
+            display: flex;
+            flex-direction: column;
+          }
+
+          button {
+            &:first-child {
+              margin-right: 20px;
+              @include for-phone-only {
+                margin-right: 0;
+                margin-bottom: 24px;
+              }
+            }
+
+            &.cart {
+              border-radius: 32px;
+              padding: 14px 16px;
+
+              &.arrivals {
+                filter: drop-shadow(0px 0px 18px #F14A16);
+                border-radius: 20px;
+              }
+
+              i {
+                margin-right: 10px;
+              }
+            }
+
+            &.shop {
+              margin-right: 0;
+              border-radius: 32px;
+              filter: drop-shadow(2px 4px 18px rgba(241, 74, 22, 0.25));
+              padding: 14px 48px;
+
+              &.arrivals {
+                filter: drop-shadow(0px 0px 21px #F14A16);
+                border-radius: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
 // button
+
 
 .cta {
   background: transparent;
