@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="fontello/css/fontello.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="line.js"></script>
+    <script type="text/javascript" src="pie.js"></script>
+    <script type="text/javascript" src="column.js"></script>
+</head>
+<body>
+<div class="dashboard">
+    <div class="menu">
+        <div class="menu-header">
+            <img src="images/Avatar.png" alt="">
+        </div>
+        <span>Hi, Vlad</span>
+        <div class="menu-body">
+            <div class="menu-body-item active">
+                <i class="demo-icon icon-grid"></i>
+                <span>Dashboard</span>
+            </div>
+            <div class="menu-body-item">
+                <i class="demo-icon icon-send"></i>
+                <span>Transaction</span>
+            </div>
+            <div class="menu-body-item">
+                <i class="demo-icon icon-bar-chart-alt"></i>
+                <span>Statistics</span>
+            </div>
+            <div class="menu-body-item">
+                <i class="demo-icon icon-credit-card"></i>
+                <span>Card</span>
+            </div>
+            <div class="menu-body-item">
+                <i class="demo-icon icon-user"></i>
+                <span>Profile</span>
+            </div>
+            <div class="menu-body-item">
+                <i class="demo-icon icon-settings"></i>
+                <span>Settings</span>
+            </div>
+        </div>
+        <div class="menu-footer">
+            <div class="menu-footer-item active">
+                <i class="demo-icon icon-log-out"></i>
+                <span>Log out</span>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content-header">
+            <div class="">
+                Your Dashboard
+            </div>
+            <div class="form">
+                <label for="search">
+                    <i class="demo-icon icon-search"></i>
+                </label>
+                <input type="text" id="search" placeholder="Search">
+                <div class="notification">
+                    <i class="demo-icon icon-inbox"></i>
+                    <i class="demo-icon icon-notification"></i>
+                </div>
+            </div>
+        </div>
+        <div class="content-cards">
+            <div class="content-cards-item">
+                <div class="content-cards-item-money">
+                    <span>¥ 5600.89</span>
+                    <img src="images/Visa_Inc._logo%201.png" alt="">
+                </div>
+                <div class="content-cards-item-series">
+                    <span>4310</span>
+                    <span>9396</span>
+                    <span>4545</span>
+                    <span>4410</span>
+                </div>
+                <div class="content-cards-item-info">
+                    <div class="content-cards-item-info-personal">
+                        <span>Name</span>
+                        <span>Cathy Blaze</span>
+                    </div>
+                    <div class="content-cards-item-info-personal expire">
+                        <span>Expire</span>
+                        <span>02 / 30</span>
+                    </div>
+                </div>
+            </div>
+            <div class="content-cards-item blue">
+                <div class="content-cards-item-money">
+                    <span>¥ 109.00</span>
+                    <img src="images/MasterCard.png" alt="">
+                </div>
+                <div class="content-cards-item-series">
+                    <span>5121</span>
+                    <span>6002</span>
+                    <span>0576</span>
+                    <span>3337</span>
+                </div>
+                <div class="content-cards-item-info">
+                    <div class="content-cards-item-info-personal">
+                        <span>Name</span>
+                        <span>Charlene Becerra</span>
+                    </div>
+                    <div class="content-cards-item-info-personal expire">
+                        <span>Expire</span>
+                        <span>11 / 35</span>
+                    </div>
+                </div>
+            </div>
+            <div class="content-cards-add">
+                <i class="demo-icon icon-circle-add"></i>
+                <span>Add Card</span>
+            </div>
+        </div>
+        <div class="content-infos">
+            <div class="content-infos-item">
+                <div class="content-infos-item-title">
+                    Transection
+                </div>
+                <div class="content-infos-item-list">
+                    <div class="item">
+                        <img src="images/belle.png" alt="">
+                        <div class="details">
+                            <span>Belle Incentive</span>
+                            <span>12 Jan, 2022</span>
+                        </div>
+                        <span>+ ¥690.00</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/GoPro.png" alt="">
+                        <div class="details">
+                            <span>GoPro</span>
+                            <span>13 Jan, 2022</span>
+                        </div>
+                        <span>- ¥78900.00</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/P&G" alt="">
+                        <div class="details">
+                            <span>P&G Rewards</span>
+                            <span>21 Feb, 2022</span>
+                        </div>
+                        <span>+ ¥4500.00</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/Nasa.png" alt="">
+                        <div class="details">
+                            <span>NASA</span>
+                            <span>23 Mar, 2022</span>
+                        </div>
+                        <span>- ¥560.00</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/McDonalds.png" alt="">
+                        <div class="details">
+                            <span>Macdonald Cashback</span>
+                            <span>30 May, 2022</span>
+                        </div>
+                        <span>+ ¥234.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="content-infos-item">
+                <div class="content-infos-item-title">
+                    <span>Activity</span>
+                    <div class="year">
+                        <span>2021</span>
+                        <i class="demo-icon icon-caret-down"></i>
+                    </div>
+                </div>
+                <div class="content-infos-item-chart">
+                    <div id="chart_div" style="height: 350px"></div>
+                </div>
+            </div>
+        </div>
+        <div class="content-chart">
+            <div class="content-chart-header">
+                <span>Chart</span>
+                <div class="content-chart-header-time">
+                    <div class="active">
+                        <span>Daily</span>
+                    </div>
+                    <div>
+                        <span>Weekly</span>
+                    </div>
+                    <div>
+                        <span>Monthly</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="content-chart-body">
+                <div id="columnchart_material" style="width: 1152px;"></div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="sidebar-balance">
+            <div class="sidebar-balance-title">Account</div>
+            <div class="sidebar-balance-item">
+                <div class="account">
+                    <span>Balance</span>
+                    <i class="demo-icon icon-bar-chart-alt"></i>
+                </div>
+                <div class="account">
+                    <span class="money">¥ 109.00</span>
+                    <div class="account-money">
+                        <i class="demo-icon icon-caret-down"></i>
+                        <span>4.5%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-expenses">
+            <div class="sidebar-expenses-title">
+                <span>All Expenses</span>
+                <div class="">
+                    <p>Monthly</p>
+                    <i class="demo-icon icon-caret-down"></i>
+                </div>
+            </div>
+            <div class="sidebar-expenses-chart">
+                <div class="sidebar-expenses-chart-header">
+                    <div class="sidebar-expenses-chart-header-details">
+                        <span>Daily</span>
+                        <span>¥450.00</span>
+                    </div>
+                    <div class="sidebar-expenses-chart-header-details">
+                        <span>Weekly</span>
+                        <span>¥879.00</span>
+                    </div>
+                    <div class="sidebar-expenses-chart-header-details">
+                        <span>Monthly</span>
+                        <span>¥234.00</span>
+                    </div>
+                </div>
+                <div class="sidebar-expenses-chart-body">
+                    <div class="" id="donutchart"></div>
+                    <div class="sidebar-expenses-chart-body-categories">
+                        <div class="item">
+                            <div class="yellow"></div>
+                            <span>Shopping</span>
+                        </div>
+                        <div class="item">
+                            <div class="orange"></div>
+                            <span>Workspace</span>
+                        </div>
+                        <div class="item">
+                            <div class="purple"></div>
+                            <span>Platform</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-money">
+            <div class="sidebar-money-title">Send Money</div>
+            <div class="sidebar-money-body">
+                <div class="item">
+                    <img src="images/user.png" alt="">
+                    <div class="details">
+                        <span>Belle Incentive</span>
+                        <span>12 Jan, 2022</span>
+                    </div>
+                    <p>Change</p>
+                </div>
+                <div class="item card">
+                    <img src="images/Group.png" alt="">
+                    <span>Credit</span>
+                    <h1>¥890.00</h1>
+                </div>
+                <div class="item card amount">
+                    <div class="details">
+                        <span>Enter Amount</span>
+                        <span class="money"> <strong>¥</strong>890.00</span>
+                    </div>
+                    <span class="coin">YEN</span>
+                </div>
+                <button>Send Money</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,460 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Manrope', sans-serif; }
+
+.dashboard {
+  display: flex; }
+  .dashboard .menu {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px; }
+    .dashboard .menu-header img {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 22px; }
+    .dashboard .menu-body {
+      display: flex;
+      flex-direction: column;
+      flex: 1; }
+      .dashboard .menu-body-item {
+        margin-bottom: 46px;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer; }
+        .dashboard .menu-body-item:hover, .dashboard .menu-body-item.active {
+          background: #F6F6F6; }
+        .dashboard .menu-body-item i {
+          font-size: 24px;
+          cursor: pointer;
+          margin-right: 14px; }
+        .dashboard .menu-body-item span {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 22px; }
+        .dashboard .menu-body-item:last-child {
+          margin-bottom: 30px; }
+    .dashboard .menu-footer {
+      border-top: 1px solid rgba(0, 0, 0, 0.1); }
+      .dashboard .menu-footer-item {
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 30px; }
+        .dashboard .menu-footer-item:hover {
+          background: #F6F6F6; }
+        .dashboard .menu-footer-item i {
+          font-size: 24px;
+          cursor: pointer;
+          margin-right: 14px; }
+        .dashboard .menu-footer-item span {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 22px; }
+    .dashboard .menu span {
+      font-weight: 800;
+      font-size: 22px;
+      line-height: 30px;
+      margin-bottom: 40px; }
+  .dashboard .content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 30px; }
+    .dashboard .content-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px; }
+      .dashboard .content-header div {
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 27px;
+        display: flex; }
+      .dashboard .content-header .form {
+        display: flex;
+        align-items: center;
+        position: relative; }
+        .dashboard .content-header .form label {
+          position: absolute;
+          padding: 0px 8px; }
+        .dashboard .content-header .form input {
+          text-indent: 40px;
+          background: #FAFAFA;
+          border: 1px solid #FAFAFA;
+          border-radius: 8px;
+          margin-right: 40px;
+          padding: 12px 0; }
+        .dashboard .content-header .form input::placeholder {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 19px;
+          color: #000000; }
+        .dashboard .content-header .form .notification {
+          position: relative; }
+          .dashboard .content-header .form .notification i {
+            cursor: pointer;
+            margin-right: 20px;
+            font-size: 24px; }
+            .dashboard .content-header .form .notification i:last-child {
+              margin-right: 0; }
+              .dashboard .content-header .form .notification i:last-child:after {
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                background: #FF3636;
+                content: "";
+                border-radius: 50%;
+                right: 8px;
+                top: 5px; }
+    .dashboard .content-cards {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 50px; }
+      .dashboard .content-cards-item {
+        border-radius: 18px;
+        padding: 20px;
+        color: #ffffff;
+        width: 40%;
+        text-transform: uppercase;
+        background: #A534DB; }
+        .dashboard .content-cards-item.blue {
+          background: #344FDB; }
+        .dashboard .content-cards-item-money {
+          display: flex;
+          align-items: center;
+          margin-bottom: 32px; }
+          .dashboard .content-cards-item-money span {
+            display: flex;
+            flex: 1;
+            font-weight: 800;
+            font-size: 30px;
+            line-height: 41px; }
+        .dashboard .content-cards-item-series {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 30px; }
+          .dashboard .content-cards-item-series span {
+            font-weight: 800;
+            font-size: 22px;
+            line-height: 30px; }
+        .dashboard .content-cards-item-info {
+          display: flex;
+          align-items: center; }
+          .dashboard .content-cards-item-info-personal {
+            display: flex;
+            flex-direction: column;
+            flex: 1; }
+            .dashboard .content-cards-item-info-personal.expire {
+              flex: none; }
+              .dashboard .content-cards-item-info-personal.expire span:first-child {
+                text-align: right; }
+            .dashboard .content-cards-item-info-personal span {
+              font-weight: 800;
+              font-size: 10px;
+              line-height: 14px; }
+              .dashboard .content-cards-item-info-personal span:last-child {
+                margin-top: 4px;
+                font-size: 14px;
+                line-height: 19px; }
+        .dashboard .content-cards-item:last-child {
+          background: #344FDB; }
+      .dashboard .content-cards-add {
+        padding: 80px 18px;
+        color: #999999;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        border: 1px dashed #E6E6E6;
+        border-radius: 18px; }
+        .dashboard .content-cards-add i {
+          margin-bottom: 6px;
+          font-size: 24px;
+          cursor: pointer; }
+        .dashboard .content-cards-add span {
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 19px; }
+    .dashboard .content-infos {
+      display: flex;
+      align-items: center;
+      margin-bottom: 50px; }
+      .dashboard .content-infos-item {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin-right: 30px; }
+        .dashboard .content-infos-item:last-child {
+          margin-right: 0px; }
+        .dashboard .content-infos-item-title {
+          font-weight: 800;
+          font-size: 18px;
+          line-height: 25px;
+          margin-bottom: 30px;
+          display: flex;
+          align-items: center; }
+          .dashboard .content-infos-item-title span {
+            flex: 1; }
+          .dashboard .content-infos-item-title .year {
+            display: flex;
+            align-items: center;
+            border: 1px solid #E6E6E6;
+            box-sizing: border-box;
+            border-radius: 8px;
+            padding: 10px; }
+            .dashboard .content-infos-item-title .year span {
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 19px; }
+            .dashboard .content-infos-item-title .year i {
+              font-size: 24px;
+              cursor: pointer; }
+        .dashboard .content-infos-item-list .item {
+          display: flex;
+          align-items: center;
+          margin-bottom: 20px; }
+          .dashboard .content-infos-item-list .item:last-child {
+            margin-bottom: 0; }
+          .dashboard .content-infos-item-list .item img {
+            margin-right: 10px; }
+          .dashboard .content-infos-item-list .item .details {
+            display: flex;
+            flex-direction: column;
+            flex: 1; }
+            .dashboard .content-infos-item-list .item .details span {
+              text-align: left; }
+              .dashboard .content-infos-item-list .item .details span:first-child {
+                margin-bottom: 2px;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 19px; }
+              .dashboard .content-infos-item-list .item .details span:last-child {
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 16px; }
+          .dashboard .content-infos-item-list .item span {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 19px;
+            text-align: right; }
+    .dashboard .content-chart-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 120px; }
+      .dashboard .content-chart-header span {
+        flex: 1;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 25px; }
+      .dashboard .content-chart-header-time {
+        background: #F6F6F6;
+        border-radius: 50px;
+        display: flex;
+        align-items: center; }
+        .dashboard .content-chart-header-time div {
+          padding: 10px 20px;
+          cursor: pointer; }
+          .dashboard .content-chart-header-time div span {
+            padding: 10px;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 19px; }
+          .dashboard .content-chart-header-time div:hover, .dashboard .content-chart-header-time div.active {
+            background: #000000;
+            color: #ffffff;
+            border-radius: 50px; }
+          .dashboard .content-chart-header-time div:last-child {
+            margin-right: 0;
+            padding-right: 20px; }
+  .dashboard .sidebar {
+    width: 310px;
+    padding: 30px;
+    background: #FFF4F4; }
+    .dashboard .sidebar-balance {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 48px; }
+      .dashboard .sidebar-balance-title {
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 27px;
+        margin-bottom: 20px; }
+      .dashboard .sidebar-balance-item {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 17px;
+        background: #3B3659;
+        color: #ffffff; }
+        .dashboard .sidebar-balance-item .account {
+          display: flex;
+          align-items: center; }
+          .dashboard .sidebar-balance-item .account span {
+            flex: 1;
+            font-weight: 600;
+            line-height: 19px; }
+            .dashboard .sidebar-balance-item .account span.money {
+              font-weight: 800;
+              font-size: 24px;
+              line-height: 33px; }
+          .dashboard .sidebar-balance-item .account i {
+            font-size: 24px;
+            cursor: pointer; }
+          .dashboard .sidebar-balance-item .account-money {
+            margin-top: 4px; }
+            .dashboard .sidebar-balance-item .account-money i {
+              font-size: 16px;
+              cursor: pointer; }
+            .dashboard .sidebar-balance-item .account-money span {
+              text-align: right; }
+    .dashboard .sidebar-expenses {
+      margin-bottom: 40px; }
+      .dashboard .sidebar-expenses-title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 26px; }
+        .dashboard .sidebar-expenses-title span {
+          font-weight: 800;
+          font-size: 20px;
+          line-height: 27px;
+          flex: 1; }
+        .dashboard .sidebar-expenses-title div {
+          background: #ffffff;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          padding: 12px 10px; }
+          .dashboard .sidebar-expenses-title div p {
+            margin: 0;
+            font-weight: 500;
+            line-height: 16px; }
+          .dashboard .sidebar-expenses-title div i {
+            font-size: 24px;
+            cursor: pointer; }
+      .dashboard .sidebar-expenses-chart {
+        background: #ffffff;
+        border-radius: 18px; }
+        .dashboard .sidebar-expenses-chart-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 20px;
+          margin-bottom: 10px; }
+          .dashboard .sidebar-expenses-chart-header-details {
+            display: flex;
+            flex-direction: column; }
+            .dashboard .sidebar-expenses-chart-header-details span:first-child {
+              font-weight: 600;
+              font-size: 12px;
+              line-height: 16px;
+              color: rgba(0, 0, 0, 0.4); }
+            .dashboard .sidebar-expenses-chart-header-details span:last-child {
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 22px; }
+        .dashboard .sidebar-expenses-chart-body-categories {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 30px; }
+          .dashboard .sidebar-expenses-chart-body-categories .item {
+            display: flex;
+            align-items: center; }
+            .dashboard .sidebar-expenses-chart-body-categories .item span {
+              font-weight: 600;
+              font-size: 12px;
+              line-height: 16px; }
+            .dashboard .sidebar-expenses-chart-body-categories .item div {
+              width: 12px;
+              height: 12px;
+              border-radius: 50%;
+              margin-right: 6px; }
+              .dashboard .sidebar-expenses-chart-body-categories .item div.yellow {
+                background: #FFCA28; }
+              .dashboard .sidebar-expenses-chart-body-categories .item div.orange {
+                background: #EC6F48; }
+              .dashboard .sidebar-expenses-chart-body-categories .item div.purple {
+                background: #836CDA; }
+    .dashboard .sidebar-money-title {
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 27px;
+      margin-bottom: 20px; }
+    .dashboard .sidebar-money-body {
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 18px; }
+      .dashboard .sidebar-money-body button {
+        border-radius: 10px;
+        background: #249A70;
+        border: 1px solid #249A70;
+        width: 100%;
+        cursor: pointer;
+        padding: 16px;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 19px; }
+      .dashboard .sidebar-money-body .item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px; }
+        .dashboard .sidebar-money-body .item.card {
+          margin-bottom: 20px;
+          background: #FAFAFA;
+          padding: 20px;
+          border-radius: 10px; }
+          .dashboard .sidebar-money-body .item.card span {
+            margin-right: 32px;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 19px;
+            color: rgba(0, 0, 0, 0.6); }
+          .dashboard .sidebar-money-body .item.card .details {
+            display: flex;
+            flex-direction: column; }
+            .dashboard .sidebar-money-body .item.card .details span.money {
+              font-weight: 700;
+              font-size: 22px;
+              line-height: 30px;
+              color: #000000; }
+            .dashboard .sidebar-money-body .item.card .details span strong {
+              color: rgba(0, 0, 0, 0.6);
+              margin-right: 6px; }
+          .dashboard .sidebar-money-body .item.card.coin {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 22px; }
+          .dashboard .sidebar-money-body .item.card h1 {
+            font-size: 18px;
+            line-height: 25px;
+            margin: 0; }
+        .dashboard .sidebar-money-body .item.amount {
+          padding: 15px; }
+        .dashboard .sidebar-money-body .item img {
+          margin-right: 10px; }
+        .dashboard .sidebar-money-body .item .details {
+          display: flex;
+          flex-direction: column;
+          flex: 1; }
+          .dashboard .sidebar-money-body .item .details span:first-child {
+            font-weight: 700;
+            font-size: 14px; }
+          .dashboard .sidebar-money-body .item .details span:last-child {
+            font-weight: 600;
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.4); }
+        .dashboard .sidebar-money-body .item p {
+          margin: 0;
+          font-weight: 700;
+          font-size: 12px;
+          line-height: 16px;
+          color: #1D70E1;
+          cursor: pointer; }
+
+/*# sourceMappingURL=styles.css.map */
