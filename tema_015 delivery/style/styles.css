@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif; }
+
+.table {
+  width: 1110px; }
+  .table-header {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    background: #1D1E42;
+    color: #fff; }
+    .table-header .entries {
+      display: flex;
+      align-items: center; }
+      .table-header .entries span {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        margin-right: 12px; }
+        .table-header .entries span:last-child {
+          margin-left: 12px;
+          margin-right: 24px; }
+      .table-header .entries .info {
+        padding: 8px;
+        background: #141432;
+        display: flex;
+        align-items: center;
+        border-radius: 8px; }
+        .table-header .entries .info span {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 15px; }
+        .table-header .entries .info i {
+          font-size: 8px;
+          cursor: pointer; }
+    .table-header .form {
+      position: relative;
+      display: flex;
+      flex: 1; }
+      .table-header .form label {
+        position: absolute;
+        padding: 0px 15px;
+        top: 7px; }
+        .table-header .form label i {
+          font-size: 16px; }
+      .table-header .form input {
+        padding: 8px 0;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        border: 1px solid #fff;
+        text-indent: 40px;
+        background: transparent;
+        border-radius: 8px;
+        color: #fff; }
+      .table-header .form input::placeholder {
+        color: #fff;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px; }
+    .table-header .add {
+      padding: 8px 12px;
+      background: #624DE3;
+      border-radius: 8px;
+      cursor: pointer; }
+      .table-header .add i {
+        margin-right: 8px;
+        font-size: 16px; }
+      .table-header .add span {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px; }
+  .table-body {
+    color: #fff; }
+    .table-body .row {
+      display: flex;
+      align-items: center;
+      padding: 16px; }
+      .table-body .row.header {
+        background: #1D1E42;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px; }
+      .table-body .row.body {
+        background: #1D1E42;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px; }
+        .table-body .row.body.odd {
+          background: #26264F; }
+  .table-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    padding-bottom: 32px;
+    background: #1D1E42; }
+    .table-footer span {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      color: #fff;
+      cursor: pointer; }
+      .table-footer span:first-child {
+        margin-right: 12px; }
+    .table-footer div {
+      margin-right: 12px; }
+      .table-footer div span {
+        margin-right: 12px;
+        background: #141432;
+        padding: 10px 16px;
+        border-radius: 8px;
+        cursor: pointer; }
+        .table-footer div span:hover, .table-footer div span.active {
+          background: #624DE3; }
+        .table-footer div span:last-child {
+          margin-right: 0; }
+  .table .cell {
+    flex: 1 1 auto;
+    text-align: center;
+    width: 100%;
+    position: relative; }
+    .table .cell i {
+      cursor: pointer;
+      position: absolute;
+      left: 2px;
+      top: 0px;
+      color: #E9E9E9; }
+      .table .cell i.action {
+        left: 0px; }
+      .table .cell i.clean {
+        position: static;
+        font-size: 24px; }
+        .table .cell i.clean:first-child {
+          margin-right: 16px;
+          color: #624DE3; }
+        .table .cell i.clean:last-child {
+          color: #A30D11; }
+    .table .cell.product {
+      text-align: left; }
+      .table .cell.product.center {
+        display: flex;
+        align-items: center; }
+        .table .cell.product.center img {
+          margin-right: 8px; }
+
+.cta {
+  width: fit-content;
+  padding: 8px 12px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  border-radius: 22px;
+  cursor: pointer; }
+  .cta.delivered {
+    color: #1F9254;
+    background: #EBF9F1;
+    border: 1px solid #EBF9F1; }
+  .cta.canceled {
+    color: #A30D11;
+    background: #FBE7E8;
+    border: 1px solid #FBE7E8; }
+  .cta.process {
+    color: #CD6200;
+    background: #FEF2E5;
+    border: 1px solid #FEF2E5; }
+
+/*# sourceMappingURL=styles.css.map */

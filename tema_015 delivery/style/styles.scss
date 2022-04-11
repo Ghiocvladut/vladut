@@ -1,0 +1,250 @@
+// imports
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+// mixins
+
+
+
+
+
+// variables
+$col-white:#fff;
+$col-black:#000;
+$col-purple-1: #1D1E42;
+$col-purple-2: #26264F;
+$col-purple-3:  #141432;
+$col-purple-4:  #624DE3;
+$col-grey:#E9E9E9;
+$col-green-1:#EBF9F1;
+$col-green-2:#1F9254;
+$col-orange-1:#FEF2E5;
+$col-orange-2:#CD6200;
+$col-red-1:#FBE7E8;
+$col-red-2:#A30D11;
+
+// content
+
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+}
+.table{
+  width: 1110px;
+  &-header{
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    background: $col-purple-1;
+    color:$col-white;
+    .entries{
+      display: flex;
+      align-items: center;
+      span{
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        margin-right: 12px;
+        &:last-child{
+          margin-left: 12px;
+          margin-right: 24px;
+        }
+      }
+      .info{
+        padding: 8px;
+        background: $col-purple-3;
+        display: flex;
+        align-items: center;
+        border-radius:8px;
+        span{
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 15px;
+        }
+        i{
+          font-size: 8px;
+          cursor: pointer;
+        }
+      }
+    }
+    .form{
+      position: relative;
+      display: flex;
+      flex:1;
+      label{
+        position: absolute;
+        padding: 0px 15px;
+        top:7px;
+        i{
+          font-size: 16px;
+        }
+      }
+      input{
+        padding: 8px 0;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        border:1px solid $col-white;
+        text-indent: 40px;
+        background: transparent;
+        border-radius: 8px;
+      color:$col-white;
+      }
+      input::placeholder{
+        color:$col-white;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+    .add{
+      padding: 8px 12px;
+      background: $col-purple-4;
+      border-radius: 8px;
+      cursor: pointer;
+      i{
+        margin-right: 8px;
+        font-size: 16px;
+      }
+      span{
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+  }
+  &-body{
+    color:$col-white;
+    .row{
+      display: flex;
+      align-items: center;
+      padding: 16px;
+
+      &.header{
+        background: $col-purple-1;
+
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+      }
+      &.body{
+        background: $col-purple-1;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+
+        &.odd{
+          background: $col-purple-2;
+        }
+      }
+    }
+  }
+  &-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    padding-bottom: 32px;
+    background: $col-purple-1;
+    span{
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      color:$col-white;
+      cursor: pointer;
+      &:first-child{
+        margin-right: 12px;
+      }
+
+    }
+    div{
+      margin-right: 12px;
+      span{
+        margin-right: 12px;
+        background: $col-purple-3;
+        padding:10px 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        &:hover,&.active{
+          background: $col-purple-4;
+
+        }
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+.cell{
+  flex:1 1 auto;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  i{
+    cursor: pointer;
+    position: absolute;
+    left:2px;
+    top:0px;
+    color:$col-grey;
+    &.action{
+      left:0px;
+    }
+    &.clean{
+      position: static;
+      font-size: 24px;
+      &:first-child{
+        margin-right: 16px;
+        color:$col-purple-4;
+      }
+      &:last-child{
+        color:$col-red-2;
+      }
+    }
+  }
+  &.product{
+    text-align: left;
+    &.center{
+      display: flex;
+      align-items: center;
+      img{
+        margin-right: 8px;
+      }
+    }
+  }
+}
+}
+
+// button
+
+.cta{
+  width: fit-content;
+  padding: 8px 12px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  border-radius: 22px;
+  cursor: pointer;
+  &.delivered{
+    color:$col-green-2;
+    background: $col-green-1;
+    border:1px solid $col-green-1;
+  }
+  &.canceled{
+    color:$col-red-2;
+    background: $col-red-1;
+    border:1px solid $col-red-1;
+  }
+  &.process{
+    color:$col-orange-2;
+    background: $col-orange-1;
+    border:1px solid $col-orange-1;
+  }
+}
