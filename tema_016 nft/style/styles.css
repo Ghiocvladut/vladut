@@ -251,6 +251,100 @@ body {
             .clients-content .item img:last-child {
               margin-bottom: 0; } }
 
+.work {
+  padding: 100px 150px 200px 150px;
+  background: #1D1220;
+  font-family: 'Oxanium', cursive; }
+  @media (max-width: 1800px) {
+    .work {
+      padding: 0; } }
+  .work-title {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 130px;
+    color: #F5FBF2;
+    text-align: center;
+    margin-bottom: 60px; }
+  .work-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    @media (max-width: 1800px) {
+      .work-content {
+        flex-direction: column; } }
+    .work-content-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border-right: 6px dashed #794187;
+      padding-right: 90px; }
+      @media (max-width: 1800px) {
+        .work-content-item {
+          border-right: none;
+          margin-bottom: 60px;
+          padding-right: 0; } }
+      .work-content-item:last-child {
+        padding-right: 0;
+        border: none; }
+        @media (max-width: 1800px) {
+          .work-content-item:last-child {
+            margin-bottom: 120px; } }
+      .work-content-item .step {
+        display: flex;
+        align-items: center;
+        margin-bottom: 32px; }
+        .work-content-item .step i {
+          border-radius: 50%;
+          color: #908294;
+          background: #372839;
+          font-size: 48px;
+          padding: 30px;
+          cursor: pointer; }
+          .work-content-item .step i.plus {
+            padding: 30px 33px; }
+    .work-content span {
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 28px;
+      color: #FFCE4E; }
+
+.subscribe {
+  padding: 100px 0;
+  background: #1D1220;
+  font-family: 'Oxanium', cursive; }
+  .subscribe-title {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 130px;
+    color: #F5FBF2;
+    text-align: center;
+    margin-bottom: 24px; }
+  .subscribe-form {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    @media (max-width: 900px) {
+      .subscribe-form {
+        flex-direction: column;
+        padding: 20px; } }
+    .subscribe-form input {
+      text-indent: 52px;
+      padding: 30px 0;
+      border: 1px solid #FFCE4E;
+      background: transparent;
+      font-size: 24px;
+      line-height: 35px;
+      font-family: 'Work Sans', sans-serif;
+      padding-right: 200px; }
+      @media (max-width: 900px) {
+        .subscribe-form input {
+          margin-bottom: 40px;
+          width: 100%; } }
+    .subscribe-form button {
+      font-family: 'Work Sans', sans-serif; }
+
 .cta {
   padding: 20px 30px;
   font-weight: 600;
@@ -289,6 +383,20 @@ body {
     line-height: 35px;
     color: #F5FBF2;
     padding: 24px 64px; }
+  .cta.categories {
+    background: #FFCE4E;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000;
+    border: 1px solid #FFCE4E;
+    padding: 20px 56px; }
+  .cta.subscribe {
+    background: #E7B226;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 35px;
+    padding: 30px 56px; }
 
 .title {
   display: flex;
@@ -296,26 +404,112 @@ body {
   justify-content: center;
   padding-bottom: 84px;
   font-family: 'Oxanium', cursive; }
+  .title.categories {
+    padding-top: 120px; }
   .title .circle {
     width: 110px;
     height: 110px;
     border-radius: 50%;
     background: #8613A5;
     position: relative;
-    right: -68px; }
+    right: 186px; }
     .title .circle.red {
-      background: #E03054; }
+      background: #E03054;
+      right: 270px; }
+    .title .circle.categories {
+      right: 308px; }
+    .title .circle.creators {
+      right: 176px; }
   .title span {
     z-index: 1;
     font-weight: 700;
     font-size: 64px;
     line-height: 130px;
-    color: #F5FBF2 !important; }
+    color: #F5FBF2 !important;
+    position: absolute; }
 
 .auctions {
   padding: 0px 150px;
   background: #1D1220;
   font-family: 'Work Sans', sans-serif; }
+  .auctions.categories {
+    background: #251928; }
+  .auctions.creators {
+    padding-top: 90px; }
+  .auctions-content {
+    display: flex;
+    flex-direction: column; }
+    .auctions-content-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 90px; }
+      @media (max-width: 1800px) {
+        .auctions-content-list {
+          flex-direction: column;
+          padding-bottom: 0px; } }
+      .auctions-content-list-item {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        background: #302034;
+        box-shadow: inset 2px 0px 0px #E03054;
+        margin-right: 72px; }
+        @media (max-width: 1800px) {
+          .auctions-content-list-item {
+            margin-right: 0;
+            margin-bottom: 48px; } }
+        @media (max-width: 599px) {
+          .auctions-content-list-item {
+            flex-direction: column; } }
+        .auctions-content-list-item:last-child {
+          margin-right: 0; }
+        .auctions-content-list-item .user {
+          padding: 24px;
+          padding-right: 0; }
+          @media (max-width: 599px) {
+            .auctions-content-list-item .user {
+              padding: 40px; } }
+        .auctions-content-list-item .info {
+          padding: 24px;
+          padding-right: 100px;
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+          border-right: 1px solid #49374E; }
+          @media (max-width: 599px) {
+            .auctions-content-list-item .info {
+              padding-right: 0;
+              text-align: center;
+              border-right: none;
+              padding: 40px; } }
+          .auctions-content-list-item .info span:first-child {
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 35px;
+            color: #F5FBF2;
+            font-family: 'Oxanium', sans-serif; }
+          .auctions-content-list-item .info span:last-child {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 36px;
+            color: #BDAAC1;
+            font-family: 'Work Sans', sans-serif; }
+        .auctions-content-list-item .detail {
+          display: flex;
+          flex-direction: column;
+          padding: 40px 50px;
+          text-align: center; }
+          .auctions-content-list-item .detail span:first-child {
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 35px;
+            color: #F5FBF2; }
+          .auctions-content-list-item .detail span:last-child {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 36px;
+            color: #908294; }
   .auctions-list {
     display: flex;
     align-items: center;
@@ -340,6 +534,13 @@ body {
       .auctions-list-item .image {
         position: relative;
         margin-bottom: 28px; }
+        .auctions-list-item .image .categories:hover {
+          opacity: 0.5; }
+        .auctions-list-item .image:hover .hover {
+          display: block;
+          opacity: 1; }
+        .auctions-list-item .image:hover .status {
+          border: 5px solid white; }
         .auctions-list-item .image.next .next {
           position: absolute;
           top: 50%;
@@ -367,6 +568,26 @@ body {
             font-size: 24px;
             line-height: 35px;
             color: #F5FBF2; }
+        .auctions-list-item .image .hover {
+          opacity: 1;
+          padding: 0;
+          backdrop-filter: none;
+          background: none;
+          box-shadow: none;
+          position: absolute;
+          bottom: 96px;
+          right: 52px;
+          display: none; }
+          .auctions-list-item .image .hover.active {
+            display: block; }
+          .auctions-list-item .image .hover-content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 1; }
       .auctions-list-item .user {
         display: flex;
         align-items: center;
@@ -384,6 +605,9 @@ body {
           font-size: 20px;
           line-height: 35px;
           color: #C2B5C6; }
+        .auctions-list-item .user.categories img {
+          width: 64px;
+          height: 64px; }
         .auctions-list-item .user img {
           margin-right: 16px; }
         .auctions-list-item .user .info {
@@ -415,6 +639,8 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 40px; }
+  .price.categories {
+    margin-bottom: 0; }
   .price span {
     display: flex;
     flex: 1;
@@ -426,6 +652,8 @@ body {
     line-height: 35px;
     color: #F5FBF2;
     margin: 0; }
+    .price h1.categories {
+      font-family: 'Oxanium', cursive; }
 
 .view {
   display: flex;
