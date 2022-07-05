@@ -1,0 +1,361 @@
+// variables
+
+$col-blue-1: #0D1832;
+$col-blue-2: #0076FF;
+$col-blue-3: #001833;
+$col-blue-4: #2C3F56;
+$col-white: #ffffff;
+$col-grey-1: #B5B2B5;
+$col-grey-2: #F4F4F4;
+$col-black-1: #000000;
+$col-black-2: #120F12;
+
+// mixins
+
+
+@mixin for-phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-portrait-up {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-landscape-up {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin for-desktop-up {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin for-big-desktop-up {
+  @media (max-width: 1800px) {
+    @content;
+  }
+}
+
+// imports
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;0,900;1,700&display=swap');
+
+// content
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  //font-family: 'Lato', sans-serif;
+
+}
+
+.menu {
+  padding: 0 120px;
+  @include for-desktop-up {
+    padding: 0;
+  }
+
+  .navbar {
+    font-family: 'Josefin Sans', sans-serif;
+    padding-top: 1.2rem !important;
+    padding-bottom: 1.2rem !important;
+  }
+
+  .navbar-brand {
+    span {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 20px;
+      color: $col-blue-1;
+
+      &:first-child {
+        margin-right: 42px;
+      }
+    }
+  }
+
+  .nav-item {
+
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  .nav-link {
+    color: $col-blue-2 !important;
+  }
+
+  .d-flex {
+    align-items: center;
+    @include for-desktop-up {
+      flex-direction: column;
+      align-items: baseline;
+    }
+
+    .item {
+      margin-right: 30px;
+      @include for-desktop-up {
+        margin-bottom: 14px;
+      }
+
+      span {
+        font-size: 20px;
+        line-height: 20px;
+        color: $col-blue-1;
+        margin-right: 8px;
+      }
+
+      i {
+        cursor: pointer;
+      }
+    }
+  }
+
+}
+
+.hero {
+  font-family: 'Josefin Sans', sans-serif;
+  padding-left: 120px;
+  @include for-desktop-up {
+    padding: 0;
+
+  }
+
+  &-content {
+    display: flex;
+    align-items: center;
+    @include for-desktop-up {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    &-item {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      @include for-desktop-up {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        &:first-child {
+          margin-bottom: 40px;
+        }
+      }
+
+      h1 {
+        font-size: 120px;
+        line-height: 101.3%;
+        color: $col-blue-3;
+        margin: 0;
+        margin-bottom: 58px;
+        font-family: 'Lato', sans-serif;
+        @include for-phone-only {
+          font-size: 80px;
+        }
+      }
+
+      span {
+        font-size: 30px;
+        line-height: 101.3%;
+        color: $col-blue-4;
+        margin-bottom: 40px;
+      }
+
+      img {
+        @include for-desktop-up {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.details {
+  background: $col-blue-3;
+
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 56px 120px;
+    @include for-tablet-landscape-up {
+      flex-direction: column;
+    }
+
+    &-item {
+      flex-direction: column;
+      @include for-tablet-landscape-up {
+        margin-top: 24px;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+
+      .info {
+        margin-bottom: 24px;
+
+        span {
+          font-weight: 700;
+          font-size: 75px;
+          line-height: 90px;
+          color: $col-white;
+          font-family: 'Lato', sans-serif;
+        }
+
+        i {
+          margin-left: 18px;
+          font-size: 18px;
+          color: $col-white;
+          @include for-phone-only{
+            display: none;
+          }
+        }
+      }
+
+      .category {
+        font-size: 18px;
+        line-height: 18px;
+        color: $col-grey-1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.advantages {
+  padding: 200px 120px 120px 120px;
+  font-family: 'Josefin Sans', sans-serif;
+  @include for-desktop-up {
+    padding: 0;
+  }
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    @include for-desktop-up {
+      flex-direction: column;
+    }
+
+    &-item {
+      @include for-desktop-up{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 40px;
+      }
+      &.tool {
+        display: flex;
+      }
+
+
+      span {
+        font-family: 'Lato', sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 74px;
+        line-height: 89px;
+        color: $col-black-2;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 125%;
+        color: $col-black-2;
+        margin: 0;
+        margin-top: 46px;
+        margin-bottom: 46px;
+      }
+
+      .explore {
+        display: flex;
+        align-items: center;
+
+        a {
+          text-decoration: none;
+
+          span {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 100%;
+            margin-right: 20px;
+            color: $col-blue-2;
+          }
+
+          i {
+          }
+        }
+
+      }
+
+      &-team {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        width: 370px;
+        height: 300px;
+        color: $col-white;
+        background: linear-gradient(123.5deg, #0076FF 0%, #6DFACD 100%);
+        margin-right: 20px;
+      @include for-desktop-up{
+        margin-top: 20px;
+        margin-right: 0;
+      }
+        &:last-child {
+          margin-right: 0;
+        }
+
+        i {
+          font-size: 26px;
+          margin-bottom: 42px;
+          cursor: pointer;
+        }
+
+        span {
+          font-weight: 600;
+          font-size: 26px;
+          line-height: 26px;
+          font-family: 'Josefin Sans', sans-serif;
+          color: $col-white;
+        }
+
+        p {
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 20px;
+          color: $col-grey-2;
+        }
+      }
+    }
+  }
+}
+
+
+// button cta
+
+.cta {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 18px;
+  color: $col-white;
+  padding: 18px 38px;
+  background: linear-gradient(96.5deg, #0076FF 0%, #6EFBCD 100%);
+  border-radius: 74px;
+  border: transparent;
+  width: fit-content;
+}

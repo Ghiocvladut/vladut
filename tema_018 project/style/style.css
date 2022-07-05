@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;0,900;1,700&display=swap");
+body {
+  font-family: 'Josefin Sans', sans-serif; }
+
+.menu {
+  padding: 0 120px; }
+  @media (max-width: 1200px) {
+    .menu {
+      padding: 0; } }
+  .menu .navbar {
+    font-family: 'Josefin Sans', sans-serif;
+    padding-top: 1.2rem !important;
+    padding-bottom: 1.2rem !important; }
+  .menu .navbar-brand span {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: #0D1832; }
+    .menu .navbar-brand span:first-child {
+      margin-right: 42px; }
+  .menu .nav-item {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 42px; }
+  .menu .nav-link {
+    color: #0076FF !important; }
+  .menu .d-flex {
+    align-items: center; }
+    @media (max-width: 1200px) {
+      .menu .d-flex {
+        flex-direction: column;
+        align-items: baseline; } }
+    .menu .d-flex .item {
+      margin-right: 30px; }
+      @media (max-width: 1200px) {
+        .menu .d-flex .item {
+          margin-bottom: 14px; } }
+      .menu .d-flex .item span {
+        font-size: 20px;
+        line-height: 20px;
+        color: #0D1832;
+        margin-right: 8px; }
+      .menu .d-flex .item i {
+        cursor: pointer; }
+
+.hero {
+  font-family: 'Josefin Sans', sans-serif;
+  padding-left: 120px; }
+  @media (max-width: 1200px) {
+    .hero {
+      padding: 0; } }
+  .hero-content {
+    display: flex;
+    align-items: center; }
+    @media (max-width: 1200px) {
+      .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center; } }
+    .hero-content-item {
+      width: 50%;
+      display: flex;
+      flex-direction: column; }
+      @media (max-width: 1200px) {
+        .hero-content-item {
+          width: 100%;
+          align-items: center;
+          justify-content: center; }
+          .hero-content-item:first-child {
+            margin-bottom: 40px; } }
+      .hero-content-item h1 {
+        font-size: 120px;
+        line-height: 101.3%;
+        color: #001833;
+        margin: 0;
+        margin-bottom: 58px;
+        font-family: 'Lato', sans-serif; }
+        @media (max-width: 599px) {
+          .hero-content-item h1 {
+            font-size: 80px; } }
+      .hero-content-item span {
+        font-size: 30px;
+        line-height: 101.3%;
+        color: #2C3F56;
+        margin-bottom: 40px; }
+      @media (max-width: 1200px) {
+        .hero-content-item img {
+          width: 100%; } }
+
+.details {
+  background: #001833; }
+  .details-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 56px 120px; }
+    @media (max-width: 900px) {
+      .details-content {
+        flex-direction: column; } }
+    .details-content-item {
+      flex-direction: column; }
+      @media (max-width: 900px) {
+        .details-content-item {
+          margin-top: 24px; }
+          .details-content-item:first-child {
+            margin-top: 0; } }
+      .details-content-item .info {
+        margin-bottom: 24px; }
+        .details-content-item .info span {
+          font-weight: 700;
+          font-size: 75px;
+          line-height: 90px;
+          color: #ffffff;
+          font-family: 'Lato', sans-serif; }
+        .details-content-item .info i {
+          margin-left: 18px;
+          font-size: 18px;
+          color: #ffffff; }
+          @media (max-width: 599px) {
+            .details-content-item .info i {
+              display: none; } }
+      .details-content-item .category {
+        font-size: 18px;
+        line-height: 18px;
+        color: #B5B2B5;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+
+.advantages {
+  padding: 200px 120px 120px 120px;
+  font-family: 'Josefin Sans', sans-serif; }
+  @media (max-width: 1200px) {
+    .advantages {
+      padding: 0; } }
+  .advantages-content {
+    display: flex;
+    justify-content: space-between; }
+    @media (max-width: 1200px) {
+      .advantages-content {
+        flex-direction: column; } }
+    @media (max-width: 1200px) {
+      .advantages-content-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 40px; } }
+    .advantages-content-item.tool {
+      display: flex; }
+    .advantages-content-item span {
+      font-family: 'Lato', sans-serif;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 74px;
+      line-height: 89px;
+      color: #120F12; }
+    .advantages-content-item p {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 125%;
+      color: #120F12;
+      margin: 0;
+      margin-top: 46px;
+      margin-bottom: 46px; }
+    .advantages-content-item .explore {
+      display: flex;
+      align-items: center; }
+      .advantages-content-item .explore a {
+        text-decoration: none; }
+        .advantages-content-item .explore a span {
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 100%;
+          margin-right: 20px;
+          color: #0076FF; }
+    .advantages-content-item-team {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      width: 370px;
+      height: 300px;
+      color: #ffffff;
+      background: linear-gradient(123.5deg, #0076FF 0%, #6DFACD 100%);
+      margin-right: 20px; }
+      @media (max-width: 1200px) {
+        .advantages-content-item-team {
+          margin-top: 20px;
+          margin-right: 0; } }
+      .advantages-content-item-team:last-child {
+        margin-right: 0; }
+      .advantages-content-item-team i {
+        font-size: 26px;
+        margin-bottom: 42px;
+        cursor: pointer; }
+      .advantages-content-item-team span {
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 26px;
+        font-family: 'Josefin Sans', sans-serif;
+        color: #ffffff; }
+      .advantages-content-item-team p {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 20px;
+        color: #F4F4F4; }
+
+.cta {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 18px;
+  color: #ffffff;
+  padding: 18px 38px;
+  background: linear-gradient(96.5deg, #0076FF 0%, #6EFBCD 100%);
+  border-radius: 74px;
+  border: transparent;
+  width: fit-content; }
+
+/*# sourceMappingURL=style.css.map */
