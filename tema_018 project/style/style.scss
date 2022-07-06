@@ -12,6 +12,25 @@ $col-black-2: #120F12;
 
 // mixins
 
+@mixin max-width-1920 {
+  max-width: 1920px;
+}
+
+
+@mixin p0-120 {
+  padding: 0 120px;
+}
+
+
+@mixin font-lato {
+  font-family: 'Lato', sans-serif;
+}
+
+
+@mixin font-Jose {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
 
 @mixin for-phone-only {
   @media (max-width: 599px) {
@@ -53,8 +72,6 @@ $col-black-2: #120F12;
 
 body {
   font-family: 'Josefin Sans', sans-serif;
-  //font-family: 'Lato', sans-serif;
-
 }
 
 .menu {
@@ -217,7 +234,7 @@ body {
           margin-left: 18px;
           font-size: 18px;
           color: $col-white;
-          @include for-phone-only{
+          @include for-phone-only {
             display: none;
           }
         }
@@ -250,7 +267,7 @@ body {
     }
 
     &-item {
-      @include for-desktop-up{
+      @include for-desktop-up {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -258,6 +275,7 @@ body {
         text-align: center;
         margin-top: 40px;
       }
+
       &.tool {
         display: flex;
       }
@@ -310,12 +328,13 @@ body {
         width: 370px;
         height: 300px;
         color: $col-white;
-        background: linear-gradient(123.5deg, #0076FF 0%, #6DFACD 100%);
+        background: linear-gradient(123.5deg, $col-blue-2 0%, #6DFACD 100%);
         margin-right: 20px;
-      @include for-desktop-up{
-        margin-top: 20px;
-        margin-right: 0;
-      }
+        @include for-desktop-up {
+          margin-top: 20px;
+          margin-right: 0;
+        }
+
         &:last-child {
           margin-right: 0;
         }
@@ -345,6 +364,258 @@ body {
   }
 }
 
+.feature {
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background: url("https://www.teahub.io/photos/full/4-40729_earth-4k.jpg");
+  position: relative;
+  z-index: -1;
+  @include for-desktop-up {
+    margin-top: 40px;
+  }
+
+  .container {
+    padding: 0 120px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1920px;
+    z-index: 2;
+
+    .row {
+      display: flex;
+      align-items: center;
+      @include for-tablet-landscape-up {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .title {
+        font-weight: 900;
+        font-size: 98px;
+        line-height: 113.3%;
+        color: $col-white;
+        @include for-phone-only {
+          font-size: 46px;
+        }
+        @include font-lato
+
+      }
+
+      .button {
+        display: flex;
+        justify-content: flex-end;
+        @include for-tablet-landscape-up {
+          justify-content: center;
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(100.84deg, rgba(0, 118, 255, 0.6) 0%, rgba(110, 251, 205, 0.6) 100%);
+    z-index: 1;
+  }
+
+}
+
+
+.collaboration {
+  padding-top: 160px;
+
+  &-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 146px;
+    @include for-desktop-up {
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 64px;
+      line-height: 100%;
+      @include font-lato
+    }
+
+    span {
+      margin-top: 44px;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 100%;
+    }
+  }
+
+  .container {
+    @include p0-120;
+    @include max-width-1920;
+    @include for-desktop-up {
+      padding: 0 40px;
+    }
+    margin-bottom: 60px;
+
+    .row {
+      .col-md-6 {
+        img {
+          filter: drop-shadow(0px 3.64788px 28.2711px rgba(0, 0, 0, 0.15));
+        }
+
+        .item {
+          margin-bottom: 22px;
+          @include for-desktop-up {
+            text-align: center;
+            margin-top: 40px;
+          }
+          @include font-Jose;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          span {
+            font-weight: 500;
+            font-size: 56px;
+            line-height: 56px;
+            letter-spacing: 1px;
+
+            &:last-child {
+              font-weight: 400;
+              font-size: 15px;
+              line-height: 22px;
+              letter-spacing: 1px;
+              margin-top: 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.footer {
+  padding-top: 100px;
+
+  .container {
+    @include p0-120;
+    @include max-width-1920;
+    @include for-desktop-up{
+      padding: 0 40px;
+    }
+    .row {
+@include for-desktop-up{
+  text-align: center;
+}
+      .logo {
+        font-size: 42px;
+        line-height: 42px;
+        color: $col-blue-2;
+        @include font-Jose;
+      }
+      .col-md-10{
+        @include for-tablet-landscape-up{
+          flex-direction: column;
+        }
+        .col-md-4 {
+          span {
+            font-size: 24px;
+            line-height: 36px;
+            color: $col-black-2;
+          }
+
+          .contact {
+            @include font-Jose;
+            margin-top: 90px;
+            margin-bottom: 26px;
+            padding-bottom: 2px;
+            text-decoration: underline;
+            text-decoration-color: $col-blue-2;
+            font-size: 14px;
+            line-height: 22px;
+            color: $col-black-2;
+            font-weight: 600;
+
+            &:last-child {
+              margin-top: 26px;
+              margin-bottom: 0;
+            }
+          }
+
+        }
+
+        .col-md-2 {
+          position: relative;
+
+          ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            &:first-child {
+              margin-bottom: 60px;
+              @include for-tablet-landscape-up{
+                margin-top: 40px;
+              }
+            }
+
+            li {
+              font-size: 12px;
+              line-height: 20px;
+              color: rgba($col-black-2, 0.75);
+              margin-bottom: 20px;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+
+          span {
+            font-size: 12px;
+            line-height: 20px;
+            color: rgba($col-black-2, 0.65);
+
+          }
+          i{
+            position: absolute;
+            top:-28px;
+            right: 25%;
+            font-size: 24px;
+            width: 52px;
+            height: 52px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color:$col-white;
+            background: $col-blue-2;
+            border-radius: 50%;
+            cursor: pointer;
+            @include for-tablet-landscape-up{
+              right: 45%;
+              margin-top: 20px;
+            }
+
+          }
+        }
+      }
+
+    }
+  }
+}
+
 
 // button cta
 
@@ -354,8 +625,17 @@ body {
   line-height: 18px;
   color: $col-white;
   padding: 18px 38px;
-  background: linear-gradient(96.5deg, #0076FF 0%, #6EFBCD 100%);
+  background: linear-gradient(96.5deg, $col-blue-2 0%, #6EFBCD 100%);
   border-radius: 74px;
   border: transparent;
   width: fit-content;
+
+  &.start {
+    background: $col-white;
+    color: $col-black-1;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 100%;
+    padding: 30px 48px;
+  }
 }

@@ -209,6 +209,188 @@ body {
         line-height: 20px;
         color: #F4F4F4; }
 
+.feature {
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background: url("https://www.teahub.io/photos/full/4-40729_earth-4k.jpg");
+  position: relative;
+  z-index: -1; }
+  @media (max-width: 1200px) {
+    .feature {
+      margin-top: 40px; } }
+  .feature .container {
+    padding: 0 120px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1920px;
+    z-index: 2; }
+    .feature .container .row {
+      display: flex;
+      align-items: center; }
+      @media (max-width: 900px) {
+        .feature .container .row {
+          flex-direction: column;
+          text-align: center; } }
+      .feature .container .row .title {
+        font-weight: 900;
+        font-size: 98px;
+        line-height: 113.3%;
+        color: #ffffff;
+        font-family: 'Lato', sans-serif; }
+        @media (max-width: 599px) {
+          .feature .container .row .title {
+            font-size: 46px; } }
+      .feature .container .row .button {
+        display: flex;
+        justify-content: flex-end; }
+        @media (max-width: 900px) {
+          .feature .container .row .button {
+            justify-content: center;
+            margin-top: 40px; } }
+  .feature .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(100.84deg, rgba(0, 118, 255, 0.6) 0%, rgba(110, 251, 205, 0.6) 100%);
+    z-index: 1; }
+
+.collaboration {
+  padding-top: 160px; }
+  .collaboration-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 146px; }
+    @media (max-width: 1200px) {
+      .collaboration-title {
+        text-align: center; } }
+    .collaboration-title h1 {
+      margin: 0;
+      font-size: 64px;
+      line-height: 100%;
+      font-family: 'Lato', sans-serif; }
+    .collaboration-title span {
+      margin-top: 44px;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 100%; }
+  .collaboration .container {
+    padding: 0 120px;
+    max-width: 1920px;
+    margin-bottom: 60px; }
+    @media (max-width: 1200px) {
+      .collaboration .container {
+        padding: 0 40px; } }
+    .collaboration .container .row .col-md-6 img {
+      filter: drop-shadow(0px 3.64788px 28.2711px rgba(0, 0, 0, 0.15)); }
+    .collaboration .container .row .col-md-6 .item {
+      margin-bottom: 22px;
+      font-family: 'Josefin Sans', sans-serif; }
+      @media (max-width: 1200px) {
+        .collaboration .container .row .col-md-6 .item {
+          text-align: center;
+          margin-top: 40px; } }
+      .collaboration .container .row .col-md-6 .item:last-child {
+        margin-bottom: 0; }
+      .collaboration .container .row .col-md-6 .item span {
+        font-weight: 500;
+        font-size: 56px;
+        line-height: 56px;
+        letter-spacing: 1px; }
+        .collaboration .container .row .col-md-6 .item span:last-child {
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 22px;
+          letter-spacing: 1px;
+          margin-top: 22px; }
+
+.footer {
+  padding-top: 100px; }
+  .footer .container {
+    padding: 0 120px;
+    max-width: 1920px; }
+    @media (max-width: 1200px) {
+      .footer .container {
+        padding: 0 40px; } }
+    @media (max-width: 1200px) {
+      .footer .container .row {
+        text-align: center; } }
+    .footer .container .row .logo {
+      font-size: 42px;
+      line-height: 42px;
+      color: #0076FF;
+      font-family: 'Josefin Sans', sans-serif; }
+    @media (max-width: 900px) {
+      .footer .container .row .col-md-10 {
+        flex-direction: column; } }
+    .footer .container .row .col-md-10 .col-md-4 span {
+      font-size: 24px;
+      line-height: 36px;
+      color: #120F12; }
+    .footer .container .row .col-md-10 .col-md-4 .contact {
+      font-family: 'Josefin Sans', sans-serif;
+      margin-top: 90px;
+      margin-bottom: 26px;
+      padding-bottom: 2px;
+      text-decoration: underline;
+      text-decoration-color: #0076FF;
+      font-size: 14px;
+      line-height: 22px;
+      color: #120F12;
+      font-weight: 600; }
+      .footer .container .row .col-md-10 .col-md-4 .contact:last-child {
+        margin-top: 26px;
+        margin-bottom: 0; }
+    .footer .container .row .col-md-10 .col-md-2 {
+      position: relative; }
+      .footer .container .row .col-md-10 .col-md-2 ul {
+        margin: 0;
+        padding: 0;
+        list-style: none; }
+        .footer .container .row .col-md-10 .col-md-2 ul:first-child {
+          margin-bottom: 60px; }
+          @media (max-width: 900px) {
+            .footer .container .row .col-md-10 .col-md-2 ul:first-child {
+              margin-top: 40px; } }
+        .footer .container .row .col-md-10 .col-md-2 ul li {
+          font-size: 12px;
+          line-height: 20px;
+          color: rgba(18, 15, 18, 0.75);
+          margin-bottom: 20px; }
+          .footer .container .row .col-md-10 .col-md-2 ul li:last-child {
+            margin-bottom: 0; }
+      .footer .container .row .col-md-10 .col-md-2 span {
+        font-size: 12px;
+        line-height: 20px;
+        color: rgba(18, 15, 18, 0.65); }
+      .footer .container .row .col-md-10 .col-md-2 i {
+        position: absolute;
+        top: -28px;
+        right: 25%;
+        font-size: 24px;
+        width: 52px;
+        height: 52px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        background: #0076FF;
+        border-radius: 50%;
+        cursor: pointer; }
+        @media (max-width: 900px) {
+          .footer .container .row .col-md-10 .col-md-2 i {
+            right: 45%;
+            margin-top: 20px; } }
+
 .cta {
   font-weight: 600;
   font-size: 18px;
@@ -219,5 +401,12 @@ body {
   border-radius: 74px;
   border: transparent;
   width: fit-content; }
+  .cta.start {
+    background: #ffffff;
+    color: #000000;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 100%;
+    padding: 30px 48px; }
 
 /*# sourceMappingURL=style.css.map */
