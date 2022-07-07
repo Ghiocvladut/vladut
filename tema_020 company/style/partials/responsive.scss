@@ -1,0 +1,90 @@
+@import "mixin";
+
+
+.custom-shape-divider-top-1657195986{
+  @include for-desktop-up{
+
+  }
+}
+.menu{
+  .container-fluid{
+    @include for-tablet-landscape-up{
+      display: flex;
+      flex-direction: column;
+    }
+    .d-flex {
+      ul{
+        @include for-tablet-landscape-up {
+          display: flex;
+          flex-direction: column;
+          li{
+            margin-right: 0;
+            text-align: center;
+            margin-bottom: 20px;
+            &:last-child{
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.hero{
+  .title{
+    .col-md-12{
+      .title{
+        @include for-phone-only{
+          font-size: 45px !important;
+          span{}
+        }
+
+      }
+    }
+  }
+
+}
+.pricing{
+  .col-md-12{
+    text-align: center;
+  }
+  .row{
+    &.list{
+      @include for-tablet-landscape-up{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .col-md-4{
+          margin-bottom: 44px;
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+      }
+
+    }
+
+  }
+}
+.services{
+  .row-cols-3{
+    @include for-tablet-landscape-up{
+      justify-content: center !important;
+      .col-md-4{
+        margin-bottom: 40px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .row-cols-2{
+    .col-md-6{
+      @include for-tablet-landscape-up{
+        margin-top: 60px;
+      }
+    }
+  }
+}
+
+
