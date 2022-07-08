@@ -1,0 +1,122 @@
+@import "mixins";
+
+
+
+
+.navbar{
+  @include for-tablet-landscape-up{
+    display: flex;
+    flex-direction: column;
+  }
+}
+.navbar-brand{
+  @include for-tablet-landscape-up{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    img{
+     @include for-tablet-landscape-up{
+       top: 50%;
+       left: 50% !important;
+       transform: translate(-50%, -50%);
+     }
+    }
+  }
+}
+.d-flex{
+  @include for-phone-only{
+    margin-top: 20px;
+    width: 100%;
+    display: flow-root !important;
+    ul{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      li{
+        margin-right: 0 !important;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+.hero{
+  @include for-desktop-up{
+    .col-md-6{
+      &:first-child{
+        @include for-desktop-up{
+          width: 100%;
+        }
+      }
+      &:last-child{
+        display: none;
+      }
+      .item{
+        text-align: center;
+        @include for-phone-only{
+          padding: 50px 12px !important;
+        }
+      }
+      .social{
+        text-align: center;
+        margin-bottom: 60px;
+      }
+    }
+  }
+}
+.projects{
+  .row-col-4{
+    @include for-tablet-landscape-up{
+      display: flex;
+      flex-direction: column;
+      .col-6{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+  }
+  .more{
+    @include for-tablet-landscape-up{
+      display: flex;
+      align-items: center;
+      justify-content: center !important;
+    }
+  }
+}
+.principles{
+  .row-col-5{
+    @include for-tablet-landscape-up{
+      display: flex;
+      flex-direction: column;
+      .row-col-3,
+      .row-col-2{
+        display: flex;
+        flex-direction: column;
+        padding-right: 0;
+        .col-4{
+          width: 100%;
+          margin-bottom: 20px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+.collaboration{
+  .company{
+    @include for-tablet-landscape-up{
+      display: flex;
+      flex-direction: column;
+      padding: 0 40px;
+      img{
+        margin-bottom: 45px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
