@@ -168,3 +168,23 @@
     }
   }
 }
+.footer{
+  @include for-desktop-up{
+    text-align: center;
+    padding: 0 20px;
+    .update{
+      margin-right: 0 !important;
+    }
+    .contact{
+      margin-top: 40px;
+    }
+    .subscribe{
+      display: none !important;
+    }
+    .credits{
+      span{
+        font-size: 16px !important;
+      }
+    }
+  }
+}

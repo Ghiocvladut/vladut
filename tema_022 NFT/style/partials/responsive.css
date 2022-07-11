@@ -108,4 +108,17 @@
     .news .row .col-md-3:last-child {
       margin-bottom: 0; } }
 
+@media (max-width: 1200px) {
+  .footer {
+    text-align: center;
+    padding: 0 20px; }
+    .footer .update {
+      margin-right: 0 !important; }
+    .footer .contact {
+      margin-top: 40px; }
+    .footer .subscribe {
+      display: none !important; }
+    .footer .credits span {
+      font-size: 16px !important; } }
+
 /*# sourceMappingURL=responsive.css.map */
