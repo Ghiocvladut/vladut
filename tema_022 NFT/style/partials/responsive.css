@@ -1,0 +1,111 @@
+@media (max-width: 1200px) {
+  .nav-item {
+    width: fit-content;
+    margin-bottom: 20px; } }
+
+@media (max-width: 1200px) {
+  .hero {
+    margin-top: 60px; } }
+@media (max-width: 1200px) {
+  .hero .row {
+    display: flex;
+    flex-direction: column; } }
+@media (max-width: 1200px) {
+  .hero .col-md-6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center; }
+    .hero .col-md-6 p {
+      text-align: center;
+      width: 100% !important; }
+      .hero .col-md-6 p:before {
+        width: 220px !important; }
+    .hero .col-md-6 .actions {
+      display: flex;
+      flex-direction: column; }
+      .hero .col-md-6 .actions button {
+        margin-bottom: 40px; }
+        .hero .col-md-6 .actions button:first-child {
+          margin-right: 0 !important; } }
+
+.activity {
+  margin-bottom: 240px; }
+  @media (max-width: 1200px) {
+    .activity .row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0 20px; } }
+  @media (max-width: 1200px) {
+    .activity .row .col-md-3 {
+      margin-bottom: 40px; }
+      .activity .row .col-md-3:last-child {
+        margin-bottom: 0; } }
+
+@media (max-width: 1200px) {
+  .bids {
+    padding: 0 20px; } }
+@media (max-width: 1200px) {
+  .bids .row .col-md-12 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center; }
+    .bids .row .col-md-12 .col-md-6:last-child {
+      justify-content: center !important; } }
+@media (max-width: 1200px) {
+  .bids .row .item {
+    display: flex;
+    flex-direction: column; }
+    .bids .row .item .col-md-3 {
+      margin-bottom: 40px;
+      width: fit-content !important; }
+      .bids .row .item .col-md-3 .info {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        width: 100%; }
+        .bids .row .item .col-md-3 .info-item {
+          align-items: center;
+          margin-bottom: 10px; }
+      .bids .row .item .col-md-3 .currency {
+        display: flex;
+        flex-direction: column; }
+        .bids .row .item .col-md-3 .currency-item {
+          display: flex;
+          flex-direction: column;
+          text-align: center; }
+          .bids .row .item .col-md-3 .currency-item i {
+            margin-bottom: 20px; }
+      .bids .row .item .col-md-3:last-child {
+        margin-bottom: 0; } }
+
+@media (max-width: 1200px) {
+  .community {
+    padding: 0 20px; } }
+@media (max-width: 1200px) {
+  .community .container .row .col-md-12:last-child {
+    display: flex;
+    flex-direction: column; }
+    .community .container .row .col-md-12:last-child .col-md-6 {
+      margin-bottom: 60px; }
+      .community .container .row .col-md-12:last-child .col-md-6:last-child {
+        margin-bottom: 0; }
+      .community .container .row .col-md-12:last-child .col-md-6 span {
+        font-size: 25px; } }
+
+@media (max-width: 1200px) {
+  .news {
+    padding: 0 20px; } }
+@media (max-width: 1200px) {
+  .news .row .col-md-3 {
+    margin-bottom: 40px; }
+    .news .row .col-md-3:last-child {
+      margin-bottom: 0; } }
+
+/*# sourceMappingURL=responsive.css.map */
