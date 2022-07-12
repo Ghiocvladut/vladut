@@ -61,3 +61,29 @@
     }
   }
 }
+
+.specialize{
+  @include for-desktop-up{
+    padding: 0 20px;
+  }
+  .row{
+    @include for-desktop-up{
+      display: flex;
+      flex-direction: column;
+      .col-md-3{
+        margin-bottom: 60px;
+      }
+    }
+  }
+}
+
+.services{
+  .col-md-6{
+    @include for-desktop-up{
+      text-align: center;
+      &:first-child{
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

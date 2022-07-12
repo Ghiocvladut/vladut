@@ -33,4 +33,20 @@
       margin-bottom: 20px;
       width: 140px; } }
 
+@media (max-width: 1200px) {
+  .specialize {
+    padding: 0 20px; } }
+@media (max-width: 1200px) {
+  .specialize .row {
+    display: flex;
+    flex-direction: column; }
+    .specialize .row .col-md-3 {
+      margin-bottom: 60px; } }
+
+@media (max-width: 1200px) {
+  .services .col-md-6 {
+    text-align: center; }
+    .services .col-md-6:first-child {
+      margin-bottom: 40px; } }
+
 /*# sourceMappingURL=responsive.css.map */
