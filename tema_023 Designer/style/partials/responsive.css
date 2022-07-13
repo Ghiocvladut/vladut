@@ -47,6 +47,31 @@
   .services .col-md-6 {
     text-align: center; }
     .services .col-md-6:first-child {
-      margin-bottom: 40px; } }
+      margin-bottom: 40px; }
+    .services .col-md-6:last-child {
+      padding-left: 10px !important; } }
+
+@media (max-width: 1200px) {
+  .products .col-md-6 {
+    text-align: center; }
+    .products .col-md-6:last-child {
+      margin-top: 40px; } }
+
+@media (max-width: 1200px) {
+  .cases .row {
+    text-align: center; }
+    .cases .row .col-md-6:last-child {
+      justify-content: center !important; } }
+@media (max-width: 1200px) {
+  .cases .content .col-md-6:first-child {
+    margin-bottom: 40px; } }
+@media (max-width: 1200px) {
+  .cases .content-item .info {
+    display: flex;
+    flex-direction: column; }
+    .cases .content-item .info-item {
+      margin-left: 0  !important;
+      margin-bottom: 10px;
+      margin-top: 10px; } }
 
 /*# sourceMappingURL=responsive.css.map */
