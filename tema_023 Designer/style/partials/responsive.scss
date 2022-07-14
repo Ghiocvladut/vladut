@@ -15,7 +15,9 @@
   }
 
   .nav-link {
+  @include for-desktop-up{
     margin-bottom: 20px;
+  }
 
     &.active {
       @include for-desktop-up {
@@ -131,6 +133,66 @@
             margin-bottom: 10px;
             margin-top: 10px;
           }
+        }
+      }
+    }
+  }
+}
+
+.questions{
+  .row{
+    .col-md-6{
+      .item{
+        @include for-desktop-up{
+          text-align: center;
+          padding-top: 20px;
+        }
+      }
+
+    }
+  }
+}
+
+.form{
+  .row{
+    .item{
+      @include for-desktop-up{
+        padding: 20px 60px !important;
+        h1,
+        span{
+          text-align: center;
+        }
+      }
+      &-list{
+        &-content{
+          @include for-desktop-up{
+            display: flex;
+            flex-direction: column;
+            input{
+              margin-right: 0 !important;
+              &:last-child{
+                padding-top: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer{
+  .row{
+    @include for-desktop-up{
+      .col-md-4{
+        display: flex;
+        align-items: center;
+        justify-content: center !important;
+        &:last-child{
+          margin-top: 20px;
+        }
+        &:first-child{
+          margin-bottom: 20px;
         }
       }
     }
