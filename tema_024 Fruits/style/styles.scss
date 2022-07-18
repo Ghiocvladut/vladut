@@ -265,7 +265,7 @@ body {
     padding: 64px 44px;
 
     .row {
-      .col-md-3 {
+      .col {
         strong {
           color: $col-grey-2;
           @include font-poppins;
@@ -352,11 +352,15 @@ body {
         display: flex;
         align-items: center;
       justify-content: space-between;
-        .col-md-3 {
+        .col {
           border-radius: 12px;
           border: 1px solid $col-grey-3;
           padding: 16px !important;
-          width:fit-content;
+          height: 100%;
+          margin-right: 32px;
+          &:last-child{
+            margin-right: 0;
+          }
           .background {
             border-radius: 12px;
             background: $col-grey-5;
@@ -433,6 +437,7 @@ body {
 
 .customers{
   .container{
+    position: relative;
     padding: 66px 46px;
     .row{
       &.title{
@@ -458,9 +463,73 @@ body {
           font-size: 18px;
           line-height: 27px;
           color:$col-grey-2;
+          padding: 0;
+        }
+      }
+      display: flex;
+      justify-content: space-between;
+      .col{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 24px 32px !important;
+        border: 1px solid $col-grey-8;
+        border-radius: 12px;
+        background: $col-white;
+        width: fit-content;
+        @include font-poppins;
+        position: relative;
+        margin-right: 32px;
+        &:last-child{
+          margin-right: 0;
+        }
+        span{
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 22px;
+          color:$col-grey-2;
+          margin-bottom: 24px;
+        }
+        p{
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 18px;
+          color:$col-grey-4;
+          margin: 0;
+          margin-bottom: 16px;
+        }
+
+        .user{
+          position: absolute;
+          bottom: -15%;
+          left: calc(50% - 48px/2 - 0.5px);
+          border-radius: 50%;
+          background: $col-grey-6;
+          width: 48px;
+          height: 48px;
         }
       }
     }
+    .item{
+      position:absolute;
+      left: -40px;
+      bottom: 30%;
+      padding: 18px 14px;
+      background: $col-grey-2;
+      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+      width: fit-content;
+      border-radius: 12px 0px 0px 12px;
+      cursor: pointer;
+      &.right{
+        right: -40px;
+        bottom: 30%;
+      }
+      i{
+        font-size: 22px;
+        color:$col-white;
+      }
+    }
+
 
   }
 }
