@@ -1,0 +1,73 @@
+@media (max-width: 1200px) {
+  .menu-header .row {
+    display: flex; } }
+@media (max-width: 1200px) {
+  .menu-header .col-md-6 {
+    display: flex;
+    flex-direction: column;
+    width: 50%; }
+    .menu-header .col-md-6 span {
+      margin-bottom: 20px; }
+    .menu-header .col-md-6:last-child span {
+      margin-right: 0 !important;
+      text-align: right; } }
+@media (max-width: 1200px) {
+  .menu-body .row .logo {
+    text-align: center;
+    margin-bottom: 40px; } }
+@media (max-width: 1200px) {
+  .menu-body .row .search {
+    margin-bottom: 40px;
+    padding: 8px !important; }
+    .menu-body .row .search-item {
+      padding-right: 6px !important; }
+      .menu-body .row .search-item:last-child {
+        padding-right: 0 !important; }
+      .menu-body .row .search-item.product {
+        padding-left: 6px !important; }
+        .menu-body .row .search-item.product span {
+          margin-right: 10px !important; } }
+@media (max-width: 1200px) {
+  .menu-body .row .col-md-2 {
+    display: flex;
+    justify-content: center !important; } }
+@media (max-width: 1200px) {
+  .menu-selector .row .list {
+    flex-direction: column; }
+    .menu-selector .row .list ul {
+      flex-direction: column;
+      text-align: center; }
+      .menu-selector .row .list ul li {
+        margin-right: 0 !important;
+        margin-bottom: 20px; }
+        .menu-selector .row .list ul li:last-child {
+          margin-bottom: 0; } }
+
+@media (max-width: 1200px) {
+  .category .row .col-md-3 {
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+    .category .row .col-md-3 li {
+      text-align: center; } }
+@media (max-width: 1200px) {
+  .category .row .col-md-4 {
+    margin-bottom: 40px; }
+    .category .row .col-md-4 .item {
+      margin-bottom: 60px; } }
+@media (max-width: 1200px) {
+  .category .row .col-md-9 {
+    display: flex;
+    align-items: center;
+    flex-direction: column; } }
+@media (max-width: 1200px) {
+  .category .row .col-md-9 .col-md-3 {
+    width: 100%; }
+    .category .row .col-md-9 .col-md-3 .item {
+      text-align: center; }
+    .category .row .col-md-9 .col-md-3 .price {
+      width: 100%; } }
+
+/*# sourceMappingURL=responsive.css.map */
